@@ -1,0 +1,11 @@
+.icon {
+    padding: 0 14px;
+  }
+  
+  .spacer {
+    flex: 100 1 ;
+  }
+  .navButton {
+      left: 200px;
+      margin:5px;
+  } 

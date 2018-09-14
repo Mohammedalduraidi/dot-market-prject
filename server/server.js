@@ -13,7 +13,8 @@ app.use(session({
     saveUninitialized: true
 }));
 
-
+app.post('/login', handler.login)
+app.get('/logout', handler.logout)
 app.get('/*', (req, res) => {
     res.sendFile(path.resolve(path.join(__dirname, '../manage-project/dist/manage-project/index.html')))
 })

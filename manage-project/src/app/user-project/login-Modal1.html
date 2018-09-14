@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Login as admin</h1>
+<div mat-dialog-content>
+	 <mat-form-field class="example-full-width">
+    <input matInput type="text" placeholder="Enter Admin Username" [(ngModel)]="name">
+  </mat-form-field>
+  <br>
+  
+ <mat-form-field class="example-full-width">
+    <input matInput type="password" placeholder="Enter Admin Password" [(ngModel)]="password" >
+  </mat-form-field>
+  <br>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial (click)="login(name,password)">Submit</button>
+</div>

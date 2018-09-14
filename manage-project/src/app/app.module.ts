@@ -6,6 +6,12 @@ import { RouterModule, Routes } from '@angular/router';
 //import components
 import { AppComponent } from './app.component';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
+import { AdminEmployeeComponent } from './admin-employee/admin-employee.component';
+import { AdminEquipmentComponent } from './admin-equipment/admin-equipment.component';
+import { AdminProjectComponent } from './admin-project/admin-project.component';
+import { UserDetailsComponent , LoginModal2} from './user-details/user-details.component';
+import { UserProjectComponent, LoginModal1 } from './user-project/user-project.component';
+import { HomeComponent, LoginModal } from './home/home.component';
 
 //import material-ui and other packeges
 import { FormsModule } from '@angular/forms';
@@ -23,16 +29,50 @@ import { MatCardModule } from '@angular/material/card';
 
 
 
+
 const appRoutes: Routes = [
   {
     path: '',
     component: SplashScreenComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'admin-equipment',
+    component: AdminEquipmentComponent
+  },
+  {
+    path: 'admin-employees',
+    component: AdminEmployeeComponent
+  },
+  {
+    path: 'admin-projects',
+    component: AdminProjectComponent
+  },
+  {
+    path: 'user-project',
+    component: UserProjectComponent
+  },
+  {
+    path: 'user-details',
+    component: UserDetailsComponent
   }
 ]
 @NgModule({
   declarations: [
     AppComponent,
-    SplashScreenComponent
+    SplashScreenComponent,
+    AdminEmployeeComponent,
+    AdminEquipmentComponent,
+    AdminProjectComponent,
+    UserDetailsComponent,
+    UserProjectComponent,
+    HomeComponent,
+    LoginModal,
+    LoginModal1,
+    LoginModal2
   ],
   imports: [
     BrowserModule,
@@ -62,6 +102,11 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatTableModule,
     MatCardModule
+  ], entryComponents: [
+    LoginModal,
+    LoginModal1,
+    LoginModal2
+
   ],
   providers: [],
   bootstrap: [AppComponent]

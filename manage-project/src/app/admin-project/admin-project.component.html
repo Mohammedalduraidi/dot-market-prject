@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Logo</span>
+    <a routerLink="/admin-equipment" routerLinkActive="active"><button mat-raised-button class="navButton">Admin
+        equipment
+      </button></a>
+    <a routerLink="/admin-employees"><button mat-raised-button class="navButton">Admin employees
+      </button></a>
+    <a routerLink="/admin-projects"><button mat-raised-button class="navButton">Admin projects
+      </button></a>
+    <span class="spacer">
+    </span>
+    <a>
+      <mat-icon class="icon" (click)="logout()">logout</mat-icon>
+    </a>
+  </mat-toolbar-row>
+</mat-toolbar>
