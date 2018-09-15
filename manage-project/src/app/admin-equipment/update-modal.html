@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Update Equipment</h1>
+<div mat-dialog-content>
+    <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="equipment name" [(ngModel)]="name">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <input matInput type="number" placeholder="equipment serialNumber" [(ngModel)]="serialNumber">
+    </mat-form-field>
+    <br>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="Cancel()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Update</button>
+</div>

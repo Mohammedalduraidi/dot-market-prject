@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Add Equipment</h1>
+<div mat-dialog-content>
+    <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Equipment Name" [(ngModel)]="name">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Equipment serial-number" [(ngModel)]="serialNumber">
+    </mat-form-field>
+    <br>
+
+    <input type="file" placeholder="equipment attachment" (change)="uploadImage($event)">
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="Cancel()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial (click)="Add(name , serialNumber)">Add</button>
+</div>
+<br><br>
+<input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+<button (click)="fileInput.click()">Select File</button>
+<button (click)="onUpload()">Upload!</button>

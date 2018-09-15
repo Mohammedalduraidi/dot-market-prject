@@ -12,7 +12,7 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
-
+app.post('/uploadImage', handler.uploadImage)
 app.post('/login', handler.login)
 app.get('/logout', handler.logout)
 app.get('/*', (req, res) => {

@@ -17,3 +17,28 @@
     </div>
   </div>
 </nav>
+<div class="container">
+  <button button type="button" class="btn btn-dark" (click)="openAddModal()">Add Equipment
+    <mat-icon aria-label="icon-button with a plus icon">add</mat-icon>
+  </button>
+</div>
+<br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 d-flex align-items-stretch">
+
+      <div class="card" [hidden]="jackel">
+        <div class="card-body">
+          <img class="card-img-top img" src="https://media.licdn.com/dms/image/C560BAQGrzdagbTuBmg/company-logo_200_200/0?e=1544659200&v=beta&t=hiDsFnIbA_WjGTDU1nOrL66DZP7VNgEHCJgtt1gcuz8 ">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting </p>
+          <a>Delete
+            <mat-icon aria-label=" icon-button with a heart icon">delete</mat-icon>
+          </a>
+          <a (click)="openUpdateModal()"> Update
+            <mat-icon aria-label=" icon-button with a heart icon">update</mat-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>

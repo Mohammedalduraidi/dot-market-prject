@@ -7,7 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 import { AdminEmployeeComponent } from './admin-employee/admin-employee.component';
-import { AdminEquipmentComponent } from './admin-equipment/admin-equipment.component';
+import { AdminEquipmentComponent, addModal, updateModal } from './admin-equipment/admin-equipment.component';
 import { AdminProjectComponent } from './admin-project/admin-project.component';
 import { UserDetailsComponent, LoginModal2 } from './user-details/user-details.component';
 import { UserProjectComponent, LoginModal1 } from './user-project/user-project.component';
@@ -25,7 +25,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -66,7 +66,9 @@ const appRoutes: Routes = [
     UserDetailsComponent,
     UserProjectComponent,
     LoginModal1,
-    LoginModal2
+    LoginModal2,
+    addModal,
+    updateModal
   ],
   imports: [
     BrowserModule,
@@ -82,7 +84,9 @@ const appRoutes: Routes = [
     MatTableModule,
     NgDragDropModule.forRoot(),
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    FlexLayoutModule,
+
   ],
   exports: [
     BrowserModule,
@@ -98,7 +102,9 @@ const appRoutes: Routes = [
     MatCardModule
   ], entryComponents: [
     LoginModal1,
-    LoginModal2
+    LoginModal2,
+    addModal,
+    updateModal
 
   ],
   providers: [],
