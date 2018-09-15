@@ -1,17 +1,19 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>Logo</span>
-    <a routerLink="/admin-equipment" routerLinkActive="active"><button mat-raised-button class="navButton">Admin
-        equipment
-      </button></a>
-    <a routerLink="/admin-employees"><button mat-raised-button class="navButton">Admin employees
-      </button></a>
-    <a routerLink="/admin-projects"><button mat-raised-button class="navButton">Admin projects
-      </button></a>
-    <span class="spacer">
-    </span>
-    <a>
-      <mat-icon class="icon" (click)="logout()">logout</mat-icon>
-    </a>
-  </mat-toolbar-row>
-</mat-toolbar>
+<nav class="navbar navbar-dark bg-dark mb-5">
+  <a class="navbar-brand" routerLink="/admin-equipment">Manage Project</a>
+  <div class="navbar-expand mr-auto">
+    <div class="navbar-nav">
+
+      <a class="nav-item nav-link active" routerLink="/admin-equipment">Admin equipment</a>
+      <a class="nav-item nav-link active" routerLink="/admin-employees">Admin employees</a>
+      <a class="nav-item nav-link active" routerLink="/admin-projects">Admin projects</a>
+
+    </div>
+  </div>
+  <div class="navbar-expand ml-auto navbar-nav">
+    <div class="navbar-brand">
+      <a>
+        <mat-icon class="icon" (click)="logout()">logout</mat-icon>
+      </a>
+    </div>
+  </div>
+</nav>

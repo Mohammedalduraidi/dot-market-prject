@@ -1,14 +1,17 @@
-<mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <span>Logo</span>
-      <a routerLink="/user-project" routerLinkActive="active"><button mat-raised-button class="navButton">User Project
-        </button></a>
-      <a routerLink="/user-details"><button mat-raised-button class="navButton">User Details
-        </button></a>
-      <span class="spacer">
-      </span>
-      <a (click)="openModal()">
+<nav class="navbar navbar-dark bg-dark mb-5">
+  <a class="navbar-brand" routerLink="/user-project">Manage Project</a>
+  <div class="navbar-expand mr-auto">
+    <div class="navbar-nav">
+
+      <a class="nav-item nav-link active" routerLink="/user-project">User Project</a>
+      <a class="nav-item nav-link active" routerLink="/user-details">User Details</a>
+    </div>
+  </div>
+  <div class="navbar-expand ml-auto navbar-nav">
+    <div class="navbar-brand">
+      <a (click)="openModal()">Admin Login
         <mat-icon class="icon">person</mat-icon>
       </a>
-    </mat-toolbar-row>
-  </mat-toolbar>
+    </div>
+  </div>
+</nav>

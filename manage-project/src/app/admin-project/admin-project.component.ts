@@ -15,7 +15,7 @@ export class AdminProjectComponent implements OnInit {
   logout = () => {
     Axios.get('/logout')
       .then(() => {
-        this.router.navigate(['home'])
+        this.router.navigate(['user-project'])
       })
       .catch((err) => {
         throw err;
