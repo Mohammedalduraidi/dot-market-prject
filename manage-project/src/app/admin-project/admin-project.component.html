@@ -17,3 +17,31 @@
     </div>
   </div>
 </nav>
+
+<div class="container">
+  <button button type="button" class="btn btn-dark" (click)="openProjectModal()">Add Project
+    <mat-icon aria-label="icon-button with a plus icon">add</mat-icon>
+  </button>
+</div>
+<br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 d-flex align-items-stretch">
+
+      <div class="card" *ngFor="let project of projectData">
+        <div class="card-body">
+
+          <h5 class="card-title">Project Name: {{project.name}}</h5>
+          <h5 class="card-text">Project Type: {{project.type}} </h5>
+          <h5 class="card-text">From date: {{project.fromDate}} </h5>
+          <h5 class="card-text">To date: {{project.toDate}} </h5>
+          <a (click)="deleteProject(project._id)">Delete
+            <mat-icon aria-label=" icon-button with a heart icon">delete</mat-icon>
+          </a>
+          <a (click)="openUpdateModal(project._id)"> Update
+            <mat-icon aria-label=" icon-button with a heart icon">update</mat-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>

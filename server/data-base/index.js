@@ -27,7 +27,7 @@ let equipmentSchema = new Schema({
 
 let employeesSchema = new Schema({
     name: { type: String },
-    nationality: { type: String },
+    Nationality: { type: String },
     jobTitle: { type: String }
 })
 
@@ -36,8 +36,6 @@ let projectsSchema = new Schema({
     type: { type: String },
     fromDate: { type: String },
     toDate: { type: String },
-    employees: { type: String },
-    equipment: { type: String }
 })
 adminSchema = mongoose.model('adminSchema', adminSchema);
 equipmentSchema = mongoose.model('equipmentSchema', equipmentSchema);

@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Add Employee</h1>
+<div mat-dialog-content>
+    <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Employee Name" [(ngModel)]="name">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Employee Nationality" [(ngModel)]="Nationality">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Employee Job Title" [(ngModel)]="jobTitle">
+    </mat-form-field>
+    <br>
+
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="Cancel()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial (click)="addEmployee(name , Nationality,jobTitle)">Add</button>
+</div>

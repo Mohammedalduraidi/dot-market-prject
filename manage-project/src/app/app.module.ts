@@ -6,9 +6,9 @@ import { RouterModule, Routes } from '@angular/router';
 //import components
 import { AppComponent } from './app.component';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
-import { AdminEmployeeComponent } from './admin-employee/admin-employee.component';
+import { AdminEmployeeComponent, addEmployeeModal, updateEmployeeModal } from './admin-employee/admin-employee.component';
 import { AdminEquipmentComponent, addModal, updateModal } from './admin-equipment/admin-equipment.component';
-import { AdminProjectComponent } from './admin-project/admin-project.component';
+import { AdminProjectComponent, addProject, updateProject } from './admin-project/admin-project.component';
 import { UserDetailsComponent, LoginModal2 } from './user-details/user-details.component';
 import { UserProjectComponent, LoginModal1 } from './user-project/user-project.component';
 
@@ -68,7 +68,11 @@ const appRoutes: Routes = [
     LoginModal1,
     LoginModal2,
     addModal,
-    updateModal
+    updateModal,
+    addEmployeeModal,
+    updateEmployeeModal,
+    addProject,
+    updateProject
   ],
   imports: [
     BrowserModule,
@@ -104,7 +108,11 @@ const appRoutes: Routes = [
     LoginModal1,
     LoginModal2,
     addModal,
-    updateModal
+    updateModal,
+    addEmployeeModal,
+    updateEmployeeModal,
+    addProject,
+    updateProject
 
   ],
   providers: [],

@@ -12,7 +12,7 @@ export class AdminEquipmentComponent implements OnInit {
   equipmentsData = []
   constructor(private router: Router, public dialog: MatDialog) { }
 
-  ngOnInit = () => {
+  ngOnInit() {
 
     this.retrieveEquipment()
   }

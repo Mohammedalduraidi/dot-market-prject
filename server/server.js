@@ -12,8 +12,16 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
-app.put('/updateEquipment', handler.updateEquipment)
-app.post('/deleteEquipment', handler.deleteEquipment)
+app.put('/updateProject', handler.updateEquipment)
+app.post('/deleteProject', handler.deleteProject)
+app.get('/retrieveProjectData', handler.retrieveProjectData)
+app.post('/addProject', handler.addProject)
+app.put('/updateEmployee', handler.updateEmployee);
+app.post('/deleteEmployee', handler.deleteEmployee);
+app.get('/retrieveEmployeeData', handler.retrieveEmployeeData);
+app.post('/addEmployee', handler.addEmployee);
+app.put('/updateEquipment', handler.updateEquipment);
+app.post('/deleteEquipment', handler.deleteEquipment);
 app.get('/retrieveEquipment', handler.retrieveEquipment);
 app.post('/addEquiepment', handler.addEquiepment);
 app.post('/login', handler.login);

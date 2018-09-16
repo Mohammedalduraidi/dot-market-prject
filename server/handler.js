@@ -2,6 +2,119 @@ const db = require('./data-base/index');
 const bcrypt = require('bcryptjs');
 const saltRounds = 10;
 const utility = require('./utility')
+exports.updateEquipment = (req, res) => {
+    const { name } = req.body;
+    const { type } = req.body;
+    const { fromDate } = req.body;
+    const { toDate } = req.body;
+    const { id } = req.body
+    db.projectsSchema.findOneAndUpdate({ _id: id }, { $set: { name, type, fromeDate, toDate } }, (err, data) => {
+        if (err) {
+            throw err;
+        } else {
+            res.sendStatus(200);
+        }
+    });
+}
+exports.deleteProject = (req, res) => {
+    const { id } = req.body
+    db.projectsSchema.findOneAndRemove({ _id: id }, (err, data) => {
+        if (err) {
+            throw err;
+        } else {
+            res.sendStatus(200);
+        }
+    })
+}
+exports.retrieveProjectData = (req, res) => {
+    db.projectsSchema.find({}, (err, data) => {
+        if (err) {
+            throw err;
+        } else {
+            res.send(data);
+        }
+    })
+}
+exports.addProject = (req, res) => {
+    const { name } = req.body;
+    const { type } = req.body;
+    const { fromDate } = req.body;
+    const { toDate } = req.body
+    let project = new db.projectsSchema({
+        name,
+        type,
+        fromDate,
+        toDate
+    })
+    project.save((err, data) => {
+        if (err) {
+            throw err
+        }
+        res.sendStatus(200);
+    })
+}
+
+
+
+//Update employees from data-base
+exports.updateEmployee = (req, res) => {
+    const { name } = req.body;
+    const { Nationality } = req.body;
+    const { jobTitle } = req.body;
+    const { id } = req.body
+    db.employeesSchema.findOneAndUpdate({ _id: id }, { $set: { name, Nationality, jobTitle } }, (err, data) => {
+        if (err) {
+            throw err;
+        } else {
+            res.sendStatus(200);
+        }
+    });
+}
+
+
+//Delete employee from data-base
+exports.deleteEmployee = (req, res) => {
+    const { id } = req.body
+    db.employeesSchema.findOneAndRemove({ _id: id }, (err, data) => {
+        if (err) {
+            throw err;
+        } else {
+            res.sendStatus(200);
+        }
+    })
+}
+
+
+
+//fetching employees from data-base and send it to the client
+exports.retrieveEmployeeData = (req, res) => {
+    db.employeesSchema.find({}, (err, data) => {
+        if (err) {
+            throw err;
+        } else {
+            res.send(data);
+        }
+    })
+};
+
+// add employe and save it in data-base
+exports.addEmployee = (req, res) => {
+    const { name } = req.body;
+    const { Nationality } = req.body;
+    const { jobTitle } = req.body;
+
+    let Employee = new db.employeesSchema({
+        name,
+        Nationality,
+        jobTitle
+    })
+    Employee.save((err, data) => {
+        if (err) {
+            throw err
+        }
+        res.sendStatus(200);
+    })
+};
 
 //Update Equipment from data-base
 exports.updateEquipment = (req, res) => {
