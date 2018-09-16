@@ -13,9 +13,5 @@
 </div>
 <div mat-dialog-actions>
     <button mat-button (click)="Cancel()">Cancel</button>
-    <button mat-button [mat-dialog-close]="data" cdkFocusInitial (click)="Add(name , serialNumber)">Add</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial (click)="addEquiepment(name , serialNumber)">Add</button>
 </div>
-<br><br>
-<input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
-<button (click)="fileInput.click()">Select File</button>
-<button (click)="onUpload()">Upload!</button>

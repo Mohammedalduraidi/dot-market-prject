@@ -2,16 +2,19 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Router } from '@angular/router';
 import Axios from 'axios';
+var equipmentId = ''
 @Component({
   selector: 'app-admin-equipment',
   templateUrl: './admin-equipment.component.html',
   styleUrls: ['./admin-equipment.component.css']
 })
 export class AdminEquipmentComponent implements OnInit {
-  jackel = true
+  equipmentsData = []
   constructor(private router: Router, public dialog: MatDialog) { }
 
   ngOnInit = () => {
+
+    this.retrieveEquipment()
   }
   logout = () => {
     Axios.get('/logout')
@@ -28,9 +31,35 @@ export class AdminEquipmentComponent implements OnInit {
     this.dialog.open(addModal);
   }
   //open the update modal
-  openUpdateModal = () => {
+  openUpdateModal = (id) => {
+    equipmentId = id
     this.dialog.open(updateModal);
   }
+  //fetching the equipments from data-base
+  retrieveEquipment = () => {
+    let that = this
+    Axios.get('/retrieveEquipment')
+      .then((response) => {
+        that.equipmentsData = response.data
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  };
+
+  //delete the equipment from data-base
+  deleteEquipment = (equipmentId: any) => {
+    Axios.post('/deleteEquipment', { id: equipmentId })
+      .then((response) => {
+        alert('the equipment has been deleted');
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  };
+
+
 }
 
 // Add Modal component
@@ -39,7 +68,7 @@ export class AdminEquipmentComponent implements OnInit {
   templateUrl: 'add-modal.html',
 })
 export class addModal {
-  selectedFile: File;
+  selectedImage: File;
   constructor(
     public dialogRef: MatDialogRef<AdminEquipmentComponent>,
     @Inject(MAT_DIALOG_DATA) public data: addModal) { }
@@ -47,30 +76,27 @@ export class addModal {
   Cancel(): void {
     this.dialogRef.close();
   }
-  uploadImage = (e) => {
-    const photo = e.target.files[0]
-    const formData = new FormData()
-    formData.append('selectImage', photo);
-    console.log(formData)
-    Axios.post("/uploadImage", formData)
-      .then((res) => {
-        console.log(res);
-
+  uploadImage = (event) => {
+    let photo = event.target.files[0];
+    let that = this
+    let fileReader = new FileReader();
+    fileReader.readAsDataURL(photo);
+    fileReader.onload = (e: any) => {
+      that.selectedImage = e.target.result;
+    }
+  }
+  addEquiepment = (name = '', serialNumber = '') => {
+    Axios.post('/addEquiepment', { name, serialNumber, image: this.selectedImage })
+      .then((response) => {
+        window.location.reload()
       })
-      .catch(err => {
-        console.log(err);
-
+      .catch((error) => {
+        console.log(error);
       })
   }
-  onFileChanged(event) {
-    this.selectedFile = event.target.files[0]
-  }
-  onUpload() {
-    const uploadData = new FormData();
-    uploadData.append('myFile', this.selectedFile, this.selectedFile.name);
-    console.log(this.selectedFile)
-  }
+
 }
+
 
 
 // Update Modal Component
@@ -79,7 +105,7 @@ export class addModal {
   templateUrl: 'update-modal.html',
 })
 export class updateModal {
-
+  selectedImage: File;
   constructor(
     public dialogRef: MatDialogRef<AdminEquipmentComponent>,
     @Inject(MAT_DIALOG_DATA) public data: updateModal) { }
@@ -87,6 +113,25 @@ export class updateModal {
   Cancel(): void {
     this.dialogRef.close();
   }
-
+  uploadImage = (event) => {
+    let photo = event.target.files[0];
+    let that = this
+    let fileReader = new FileReader();
+    fileReader.readAsDataURL(photo);
+    fileReader.onload = (e: any) => {
+      that.selectedImage = e.target.result;
+    }
+  }
+  //update the equipment
+  updateEquipment = (name = '', serialNumber = '') => {
+    Axios.put('/updateEquipment', { name, serialNumber, image: this.selectedImage, id: equipmentId })
+      .then((response) => {
+        alert('the equipment has been updated');
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
 
 }

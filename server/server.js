@@ -12,13 +12,16 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
-app.post('/uploadImage', handler.uploadImage)
-app.post('/login', handler.login)
-app.get('/logout', handler.logout)
+app.put('/updateEquipment', handler.updateEquipment)
+app.post('/deleteEquipment', handler.deleteEquipment)
+app.get('/retrieveEquipment', handler.retrieveEquipment);
+app.post('/addEquiepment', handler.addEquiepment);
+app.post('/login', handler.login);
+app.get('/logout', handler.logout);
 app.get('/*', (req, res) => {
     res.sendFile(path.resolve(path.join(__dirname, '../manage-project/dist/manage-project/index.html')))
 })
-const port = 4000
+const port = 4000;
 app.listen(port, () => {
     console.log('Hello world is working on port: ' + port)
 })

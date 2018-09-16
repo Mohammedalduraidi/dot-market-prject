@@ -14,21 +14,36 @@ db.once('open', () => {
 
 let Schema = mongoose.Schema; // Create a mongoose schema 
 
-let manageSchema = new Schema({
+let adminSchema = new Schema({
     username: { type: String },
-    password: { type: String },
-    equipmentName: { type: String },
-    serialNumber: { type: Number },
-    image: { type: String },
-    id: { type: Number },
-    employeeName: { type: String },
-    nationality: { type: String },
-    jobTitle: { type: String },
-    projectName: { type: String },
-    type: { type: String },
-    fromDate: { type: Date },
-    toDate: { type: Date }
+    password: { type: String }
 })
 
-manageSchema = mongoose.model('manageSchema', manageSchema);
-module.exports.manageSchema = manageSchema;
+let equipmentSchema = new Schema({
+    name: { type: String },
+    serialNumber: { type: String },
+    image: { type: String }
+})
+
+let employeesSchema = new Schema({
+    name: { type: String },
+    nationality: { type: String },
+    jobTitle: { type: String }
+})
+
+let projectsSchema = new Schema({
+    name: { type: String },
+    type: { type: String },
+    fromDate: { type: String },
+    toDate: { type: String },
+    employees: { type: String },
+    equipment: { type: String }
+})
+adminSchema = mongoose.model('adminSchema', adminSchema);
+equipmentSchema = mongoose.model('equipmentSchema', equipmentSchema);
+employeesSchema = mongoose.model('employeesSchema', employeesSchema);
+projectsSchema = mongoose.model('projectsSchema', projectsSchema);
+module.exports.adminSchema = adminSchema;
+module.exports.equipmentSchema = equipmentSchema;
+module.exports.employeesSchema = employeesSchema;
+module.exports.projectsSchema = projectsSchema;
