@@ -119,7 +119,6 @@ var AdminEmployeeComponent = /** @class */ (function () {
             var that = _this;
             axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/retrieveEmployeeData')
                 .then(function (response) {
-                console.log(response);
                 that.employeesData = response.data;
             })
                 .catch(function (error) {
@@ -253,7 +252,7 @@ module.exports = "<h1 mat-dialog-title>Add Equipment</h1>\r\n<div mat-dialog-con
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".icon {\r\n    padding: 0 14px;\r\n  }\r\n  \r\n  .spacer {\r\n    flex: 100 1 ;\r\n  }\r\n  \r\n  .navButton {\r\n      left: 200px;\r\n      margin:5px;\r\n  }\r\n  \r\n  .img{\r\n   width:150px;\r\n   height: 100px;\r\n }"
+module.exports = ".icon {\r\n    padding: 0 14px;\r\n  }\r\n  \r\n  .spacer {\r\n    flex: 100 1 ;\r\n  }\r\n  \r\n  .navButton {\r\n      left: 200px;\r\n      margin:5px;\r\n  }\r\n  \r\n  .img{\r\n   width:150px;\r\n   height: 100px;\r\n }\r\n  \r\n  .card{\r\n  min-height: 200px;\r\n  width: 300px;\r\n  padding-left: 40px;\r\n}"
 
 /***/ }),
 
@@ -337,7 +336,6 @@ var AdminEquipmentComponent = /** @class */ (function () {
                     }
                 }
                 that.equipmentsData = response.data;
-                console.log(that.equipmentsData);
             })
                 .catch(function (error) {
                 console.log(error);
@@ -488,7 +486,7 @@ module.exports = "<h1 mat-dialog-title>Add Project</h1>\r\n<div mat-dialog-conte
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".icon {\r\n    padding: 0 14px;\r\n  }\r\n  \r\n  .spacer {\r\n    flex: 100 1 ;\r\n  }\r\n  \r\n  .navButton {\r\n      left: 200px;\r\n      margin:5px;\r\n  }\r\n"
+module.exports = ".icon {\r\n    padding: 0 14px;\r\n  }\r\n  \r\n  .spacer {\r\n    flex: 100 1 ;\r\n  }\r\n  \r\n  .navButton {\r\n      left: 200px;\r\n      margin:5px;\r\n  }\r\n  \r\n  .card{\r\n    min-height: 200px;\r\n    width: 300px;\r\n    padding-left: 40px;\r\n  }"
 
 /***/ }),
 
@@ -566,7 +564,6 @@ var AdminProjectComponent = /** @class */ (function () {
             var that = _this;
             axios__WEBPACK_IMPORTED_MODULE_3___default.a.get('/retrieveProjectData')
                 .then(function (response) {
-                console.log(response);
                 that.projectData = response.data;
             })
                 .catch(function (error) {

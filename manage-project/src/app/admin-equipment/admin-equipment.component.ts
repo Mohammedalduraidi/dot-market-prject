@@ -46,9 +46,7 @@ export class AdminEquipmentComponent implements OnInit {
             response.data['image'] = 'https://clicktrans.com/bundles/app/images/picture-default.png'
           }
         }
-
         that.equipmentsData = response.data
-        console.log(that.equipmentsData)
       })
       .catch((error) => {
         console.log(error)

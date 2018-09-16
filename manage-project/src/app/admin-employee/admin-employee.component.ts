@@ -40,7 +40,6 @@ export class AdminEmployeeComponent implements OnInit {
     let that = this
     Axios.get('/retrieveEmployeeData')
       .then((response) => {
-        console.log(response);
         that.employeesData = response.data
       })
       .catch((error) => {

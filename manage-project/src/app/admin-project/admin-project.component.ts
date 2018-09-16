@@ -39,7 +39,6 @@ export class AdminProjectComponent implements OnInit {
     let that = this
     Axios.get('/retrieveProjectData')
       .then((response) => {
-        console.log(response);
         that.projectData = response.data
       })
       .catch((error) => {
