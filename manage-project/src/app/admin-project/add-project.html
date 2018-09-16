@@ -8,14 +8,17 @@
         <input matInput type="text" placeholder="Project Type" [(ngModel)]="type">
     </mat-form-field>
     <br>
-    <mat-form-field class="full-width">
-        <input matInput type="text" placeholder="From Date" [(ngModel)]="fromDate">
+    <mat-form-field>
+        <input matInput [matDatepicker]="fromdata" placeholder="Project from" [(ngModel)]="fromDate">
+        <mat-datepicker-toggle matSuffix [for]="fromdata"></mat-datepicker-toggle>
+        <mat-datepicker #fromdata></mat-datepicker>
     </mat-form-field>
     <br>
-    <mat-form-field class="full-width">
-        <input matInput type="text" placeholder="To date" [(ngModel)]="toDate">
+    <mat-form-field>
+        <input matInput [matDatepicker]="todate" placeholder="Project to" [(ngModel)]="toDate">
+        <mat-datepicker-toggle matSuffix [for]="todate"></mat-datepicker-toggle>
+        <mat-datepicker #todate></mat-datepicker>
     </mat-form-field>
-    <br>
 </div>
 <div mat-dialog-actions>
     <button mat-button (click)="Cancel()">Cancel</button>

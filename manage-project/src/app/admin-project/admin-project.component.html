@@ -33,8 +33,8 @@
 
           <h5 class="card-title">Project Name: {{project.name}}</h5>
           <h5 class="card-text">Project Type: {{project.type}} </h5>
-          <h5 class="card-text">From date: {{project.fromDate}} </h5>
-          <h5 class="card-text">To date: {{project.toDate}} </h5>
+          <h5 class="card-text">From date: {{project.fromDate | slice:0:10}} </h5>
+          <h5 class="card-text">To date: {{project.toDate | slice:0:10}} </h5>
           <a (click)="deleteProject(project._id)">Delete
             <mat-icon aria-label=" icon-button with a heart icon">delete</mat-icon>
           </a>

@@ -34,8 +34,8 @@ let employeesSchema = new Schema({
 let projectsSchema = new Schema({
     name: { type: String },
     type: { type: String },
-    fromDate: { type: String },
-    toDate: { type: String },
+    fromDate: { type: Date },
+    toDate: { type: Date },
     employee: { type: String },
     equipment: { type: String }
 })
