@@ -40,7 +40,15 @@ export class AdminEquipmentComponent implements OnInit {
     let that = this
     Axios.get('/retrieveEquipment')
       .then((response) => {
+
+        for (var i = 0; i < response.data.length; i++) {
+          if (response.data[i].image === null) {
+            response.data['image'] = 'https://clicktrans.com/bundles/app/images/picture-default.png'
+          }
+        }
+
         that.equipmentsData = response.data
+        console.log(that.equipmentsData)
       })
       .catch((error) => {
         console.log(error)

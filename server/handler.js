@@ -2,6 +2,8 @@ const db = require('./data-base/index');
 const bcrypt = require('bcryptjs');
 const saltRounds = 10;
 const utility = require('./utility')
+
+// get projects from data base
 exports.getProjects = (req, res) => {
     db.projectsSchema.find({}, (err, data) => {
         if (err) {
@@ -10,6 +12,7 @@ exports.getProjects = (req, res) => {
         res.send(data)
     })
 }
+// save items in data-base
 exports.saveItems = (req, res) => {
     const { employee } = req.body;
     const { equipment } = req.body
@@ -22,6 +25,7 @@ exports.saveItems = (req, res) => {
         res.sendStatus(200);
     })
 }
+//get equipments from data-base
 exports.getEquipment = (req, res) => {
     db.equipmentSchema.find({}, (err, data) => {
         if (err) {
@@ -30,6 +34,8 @@ exports.getEquipment = (req, res) => {
         res.send(data);
     })
 }
+
+//fetch employees data from data base
 exports.getEmployee = (req, res) => {
     db.employeesSchema.find({}, (err, data) => {
         if (err) {
@@ -39,14 +45,14 @@ exports.getEmployee = (req, res) => {
     })
 }
 
-
-exports.updateEquipment = (req, res) => {
+//update equipments in data base
+exports.updateProject = (req, res) => {
     const { name } = req.body;
     const { type } = req.body;
     const { fromDate } = req.body;
     const { toDate } = req.body;
     const { id } = req.body
-    db.projectsSchema.findOneAndUpdate({ _id: id }, { $set: { name, type, fromeDate, toDate } }, (err, data) => {
+    db.projectsSchema.findOneAndUpdate({ _id: id }, { $set: { name, type, fromDate, toDate } }, (err, data) => {
         if (err) {
             throw err;
         } else {
@@ -54,6 +60,7 @@ exports.updateEquipment = (req, res) => {
         }
     });
 }
+//delete project from data base
 exports.deleteProject = (req, res) => {
     const { id } = req.body
     db.projectsSchema.findOneAndRemove({ _id: id }, (err, data) => {
@@ -64,6 +71,7 @@ exports.deleteProject = (req, res) => {
         }
     })
 }
+//fetching all the projects from data-base
 exports.retrieveProjectData = (req, res) => {
     db.projectsSchema.find({}, (err, data) => {
         if (err) {
@@ -73,6 +81,8 @@ exports.retrieveProjectData = (req, res) => {
         }
     })
 }
+
+//add project from data-base
 exports.addProject = (req, res) => {
     const { name } = req.body;
     const { type } = req.body;
