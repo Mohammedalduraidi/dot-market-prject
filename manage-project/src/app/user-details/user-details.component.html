@@ -15,3 +15,56 @@
     </div>
   </div>
 </nav>
+<h1>Project Name : {{projectName}}</h1>
+<br>
+<div class="container">
+  <h3>Employees</h3>
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">System Employees</div>
+        <ul class="list-group">
+          <li *ngFor="let item of employeeData" draggable [dragData]="item" class="list-group-item">{{item.name}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="panel panel-default" droppable (onDrop)="onItemDropEmployee($event)">
+        <div class="panel-heading">Assigned Employees</div>
+        <div class="panel-body">
+          <li *ngFor="let item of droppedEmployee" class="list-group-item">{{item.name}}</li>
+
+        </div>
+        <br>
+        <a (click)="deleteEmployee()"><button class="btn btn-danger" [hidden]="deleteButton">remove</button></a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <h3>Equipment</h3>
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">System Equipment</div>
+        <ul class="list-group">
+          <li *ngFor="let item of equipmentData" draggable [dragData]="item" class="list-group-item">{{item.name}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="panel panel-default" droppable (onDrop)="onItemDropEquipment($event)">
+        <div class="panel-heading">Assigned Equipment</div>
+        <div class="panel-body">
+          <li *ngFor="let item of droppedEquipment" class="list-group-item">{{item.name}}</li>
+        </div>
+        <br>
+        <a (click)="deleteEquipment()"><button class="btn btn-danger" [hidden]="deleteButtonEquipment">remove</button></a>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <a routerLink="/user-project"><button class="btn btn btn-primary">Back</button></a>
+  <button class="btn btn btn-success" (click)="save(droppedEquipment, droppedEmployee)">Save</button>
+</div>

@@ -985,7 +985,7 @@ module.exports = "<h1 mat-dialog-title>Login as admin</h1>\r\n<div mat-dialog-co
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".icon {\r\n    padding: 0 14px;\r\n  }\r\n  \r\n  .spacer {\r\n    flex: 100 1 ;\r\n  }\r\n  \r\n  .navButton {\r\n      left: 200px;\r\n      margin:5px;\r\n  }"
+module.exports = ".icon {\r\n    padding: 0 14px;\r\n  }\r\n  \r\n  .spacer {\r\n    flex: 100 1 ;\r\n  }\r\n  \r\n  .navButton {\r\n      left: 200px;\r\n      margin:5px;\r\n  }\r\n  \r\n  .example-icon {\r\n    padding: 0 14px;\r\n  }\r\n  \r\n  .example-spacer {\r\n    flex: 100 1 ;\r\n  }\r\n  \r\n  .btn{\r\n    margin-left: 100px;\r\n  }"
 
 /***/ }),
 
@@ -996,7 +996,7 @@ module.exports = ".icon {\r\n    padding: 0 14px;\r\n  }\r\n  \r\n  .spacer {\r\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-dark bg-dark mb-5\">\n  <a class=\"navbar-brand\" routerLink=\"/user-project\">Manage Project</a>\n  <div class=\"navbar-expand mr-auto\">\n    <div class=\"navbar-nav\">\n\n      <a class=\"nav-item nav-link active\" routerLink=\"/user-project\">User Project</a>\n      <a class=\"nav-item nav-link active\" routerLink=\"/user-details\">User Details</a>\n    </div>\n  </div>\n  <div class=\"navbar-expand ml-auto navbar-nav\">\n    <div class=\"navbar-brand\">\n      <a (click)=\"openModal()\">Admin Login\n        <mat-icon class=\"icon\">person</mat-icon>\n      </a>\n    </div>\n  </div>\n</nav>"
+module.exports = "<nav class=\"navbar navbar-dark bg-dark mb-5\">\n  <a class=\"navbar-brand\" routerLink=\"/user-project\">Manage Project</a>\n  <div class=\"navbar-expand mr-auto\">\n    <div class=\"navbar-nav\">\n\n      <a class=\"nav-item nav-link active\" routerLink=\"/user-project\">User Project</a>\n      <a class=\"nav-item nav-link active\" routerLink=\"/user-details\">User Details</a>\n    </div>\n  </div>\n  <div class=\"navbar-expand ml-auto navbar-nav\">\n    <div class=\"navbar-brand\">\n      <a (click)=\"openModal()\">Admin Login\n        <mat-icon class=\"icon\">person</mat-icon>\n      </a>\n    </div>\n  </div>\n</nav>\n<h1>Project Name : {{projectName}}</h1>\n<br>\n<div class=\"container\">\n  <h3>Employees</h3>\n  <div class=\"row\">\n    <div class=\"col-sm-3\">\n      <div class=\"panel panel-default\">\n        <div class=\"panel-heading\">System Employees</div>\n        <ul class=\"list-group\">\n          <li *ngFor=\"let item of employeeData\" draggable [dragData]=\"item\" class=\"list-group-item\">{{item.name}}</li>\n        </ul>\n      </div>\n    </div>\n\n    <div class=\"col-sm-3\">\n      <div class=\"panel panel-default\" droppable (onDrop)=\"onItemDropEmployee($event)\">\n        <div class=\"panel-heading\">Assigned Employees</div>\n        <div class=\"panel-body\">\n          <li *ngFor=\"let item of droppedEmployee\" class=\"list-group-item\">{{item.name}}</li>\n\n        </div>\n        <br>\n        <a (click)=\"deleteEmployee()\"><button class=\"btn btn-danger\" [hidden]=\"deleteButton\">remove</button></a>\n      </div>\n    </div>\n  </div>\n  <br>\n  <br>\n  <h3>Equipment</h3>\n  <div class=\"row\">\n    <div class=\"col-sm-3\">\n      <div class=\"panel panel-default\">\n        <div class=\"panel-heading\">System Equipment</div>\n        <ul class=\"list-group\">\n          <li *ngFor=\"let item of equipmentData\" draggable [dragData]=\"item\" class=\"list-group-item\">{{item.name}}</li>\n        </ul>\n      </div>\n    </div>\n    <div class=\"col-sm-3\">\n      <div class=\"panel panel-default\" droppable (onDrop)=\"onItemDropEquipment($event)\">\n        <div class=\"panel-heading\">Assigned Equipment</div>\n        <div class=\"panel-body\">\n          <li *ngFor=\"let item of droppedEquipment\" class=\"list-group-item\">{{item.name}}</li>\n        </div>\n        <br>\n        <a (click)=\"deleteEquipment()\"><button class=\"btn btn-danger\" [hidden]=\"deleteButtonEquipment\">remove</button></a>\n      </div>\n    </div>\n  </div>\n  <br><br>\n  <a routerLink=\"/user-project\"><button class=\"btn btn btn-primary\">Back</button></a>\n  <button class=\"btn btn btn-success\" (click)=\"save(droppedEquipment, droppedEmployee)\">Save</button>\n</div>"
 
 /***/ }),
 
@@ -1016,6 +1016,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _user_project_user_project_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../user-project/user-project.component */ "./src/app/user-project/user-project.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1032,23 +1033,146 @@ var __param = (undefined && undefined.__param) || function (paramIndex, decorato
 
 
 
+
 var UserDetailsComponent = /** @class */ (function () {
-    function UserDetailsComponent(dialog) {
+    function UserDetailsComponent(router, dialog) {
         var _this = this;
+        this.router = router;
         this.dialog = dialog;
-        this.ngOnInit = function () {
-        };
+        this.deleteButtonEquipment = true;
+        this.deleteButton = true;
+        this.droppedEmployee = [];
+        this.droppedEquipment = [];
+        this.employeeData = [];
+        this.equipmentData = [];
+        this.id = '';
+        this.projectName = '';
+        //open login modal
         this.openModal = function () {
             _this.dialog.open(LoginModal2);
         };
     }
+    UserDetailsComponent.prototype.ngOnInit = function () {
+        this.getEmployee();
+        this.getEquipment();
+        this.projectName = _user_project_user_project_component__WEBPACK_IMPORTED_MODULE_4__["saveSomeData"]['projectName'];
+        this.id = _user_project_user_project_component__WEBPACK_IMPORTED_MODULE_4__["saveSomeData"]['id'];
+    };
+    //get equipments
+    UserDetailsComponent.prototype.getEquipment = function () {
+        var _this = this;
+        axios__WEBPACK_IMPORTED_MODULE_3___default.a.get('/getEquipment')
+            .then(function (data) {
+            for (var i = 0; i < data.data.length; i++) {
+                _this.equipmentData.push(data.data[i]);
+            }
+        })
+            .catch(function (err) {
+            throw err;
+        });
+    };
+    //fetch the data from the data-base
+    UserDetailsComponent.prototype.getEmployee = function () {
+        var _this = this;
+        axios__WEBPACK_IMPORTED_MODULE_3___default.a.get('/getEmployee')
+            .then(function (data) {
+            for (var i = 0; i < data.data.length; i++) {
+                _this.employeeData.push(data.data[i]);
+            }
+        })
+            .catch(function (err) {
+            throw err;
+        });
+    };
+    //remove employee from assgined droppedEmployee array
+    UserDetailsComponent.prototype.deleteEmployee = function () {
+        var pop = this.droppedEmployee.pop();
+        this.employeeData.push(pop);
+        this.deleteButton = true;
+        return pop;
+    };
+    //remove equipment from assgined droppedEquipment array
+    UserDetailsComponent.prototype.deleteEquipment = function () {
+        var pop = this.droppedEquipment.pop();
+        this.equipmentData.push(pop);
+        this.deleteButtonEquipment = true;
+        return pop;
+    };
+    //to push the employ to the droppedEmployee array
+    UserDetailsComponent.prototype.onItemDropEmployee = function (e) {
+        if (this.droppedEmployee.length === 0) {
+            for (var i = 0; i < this.employeeData.length; i++) {
+                if (e.dragData.name === this.employeeData[i].name) {
+                    this.droppedEmployee.push(e.dragData);
+                    this.removeEmployee(e.dragData, this.employeeData);
+                }
+            }
+        }
+        else {
+            alert("you already assgind an employee");
+        }
+        this.deleteButton = false;
+    };
+    // to push the equipment to the droppedEquipment array
+    UserDetailsComponent.prototype.onItemDropEquipment = function (e) {
+        if (this.droppedEquipment.length === 0) {
+            for (var i = 0; i < this.equipmentData.length; i++) {
+                if (e.dragData.name === this.equipmentData[i].name) {
+                    this.droppedEquipment.push(e.dragData);
+                    this.removeEquipment(e.dragData, this.equipmentData);
+                }
+            }
+        }
+        else {
+            alert("you already assigned and equipment");
+        }
+        this.deleteButtonEquipment = false;
+    };
+    // save the dropped items in the database
+    UserDetailsComponent.prototype.save = function () {
+        var _this = this;
+        if (this.droppedEmployee[0] === undefined) {
+            this.droppedEmployee[0] = { name: '' };
+        }
+        if (this.droppedEquipment[0] === undefined) {
+            this.droppedEquipment[0] = { name: '' };
+        }
+        if (this.droppedEquipment[0].name.length === 0 && this.droppedEmployee[0].name.length === 0) {
+            alert('please assign employee and equipment before save <3 ');
+            this.droppedEmployee.pop();
+            this.droppedEquipment.pop();
+        }
+        else {
+            return axios__WEBPACK_IMPORTED_MODULE_3___default.a.put("/saveItems", { id: this.id, employee: this.droppedEmployee[0].name, equipment: this.droppedEquipment[0].name })
+                .then(function () {
+                _this.router.navigate(['user-project']);
+            })
+                .catch(function (err) {
+                throw err;
+            });
+        }
+    };
+    // remove equipment item that has been dragged
+    UserDetailsComponent.prototype.removeEquipment = function (item, list) {
+        var index = list.map(function (e) {
+            return e.name;
+        }).indexOf(item.name);
+        list.splice(index, 1);
+    };
+    //remove equipment item that has been dragged
+    UserDetailsComponent.prototype.removeEmployee = function (item, list) {
+        var index = list.map(function (e) {
+            return e.name;
+        }).indexOf(item.name);
+        list.splice(index, 1);
+    };
     UserDetailsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-user-details',
             template: __webpack_require__(/*! ./user-details.component.html */ "./src/app/user-details/user-details.component.html"),
             styles: [__webpack_require__(/*! ./user-details.component.css */ "./src/app/user-details/user-details.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]])
     ], UserDetailsComponent);
     return UserDetailsComponent;
 }());
@@ -1118,7 +1242,7 @@ module.exports = "<h1 mat-dialog-title>Login as admin</h1>\r\n<div mat-dialog-co
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".icon {\r\n    padding: 0 14px;\r\n  }\r\n  \r\n  .spacer {\r\n    flex: 100 1 ;\r\n  }\r\n  \r\n  .navButton {\r\n      left: 200px;\r\n      margin:5px;\r\n  }"
+module.exports = ".icon {\r\n    padding: 0 14px;\r\n  }\r\n  \r\n  .spacer {\r\n    flex: 100 1 ;\r\n  }\r\n  \r\n  .navButton {\r\n      left: 200px;\r\n      margin:5px;\r\n  }\r\n  \r\n  table {\r\n    width: 100%;\r\n  } "
 
 /***/ }),
 
@@ -1129,7 +1253,7 @@ module.exports = ".icon {\r\n    padding: 0 14px;\r\n  }\r\n  \r\n  .spacer {\r\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-dark bg-dark mb-5\">\r\n  <a class=\"navbar-brand\" routerLink=\"/user-project\">Manage Project</a>\r\n  <div class=\"navbar-expand mr-auto\">\r\n    <div class=\"navbar-nav\">\r\n\r\n      <a class=\"nav-item nav-link active\" routerLink=\"/user-project\">User Project</a>\r\n      <a class=\"nav-item nav-link active\" routerLink=\"/user-details\">User Details</a>\r\n    </div>\r\n  </div>\r\n  <div class=\"navbar-expand ml-auto navbar-nav\">\r\n    <div class=\"navbar-brand\">\r\n      <a (click)=\"openModal()\">Admin Login\r\n        <mat-icon class=\"icon\">person</mat-icon>\r\n      </a>\r\n    </div>\r\n  </div>\r\n</nav>"
+module.exports = "<nav class=\"navbar navbar-dark bg-dark mb-5\">\r\n  <a class=\"navbar-brand\" routerLink=\"/user-project\">Manage Project</a>\r\n  <div class=\"navbar-expand mr-auto\">\r\n    <div class=\"navbar-nav\">\r\n\r\n      <a class=\"nav-item nav-link active\" routerLink=\"/user-project\">User Project</a>\r\n      <a class=\"nav-item nav-link active\" routerLink=\"/user-details\">User Details</a>\r\n    </div>\r\n  </div>\r\n  <div class=\"navbar-expand ml-auto navbar-nav\">\r\n    <div class=\"navbar-brand\">\r\n      <a (click)=\"openModal()\">Admin Login\r\n        <mat-icon class=\"icon\">person</mat-icon>\r\n      </a>\r\n    </div>\r\n  </div>\r\n</nav>\r\n<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\r\n  <ng-container matColumnDef=\"projectName\">\r\n    <th mat-header-cell *matHeaderCellDef> Project Name </th>\r\n    <td mat-cell *matCellDef=\"let element\"><a (click)=\"forTheNextComponent(element._id, element.name)\">{{element.name}}\r\n      </a></td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"employees\">\r\n    <th mat-header-cell *matHeaderCellDef> #Employees </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.employee}} </td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"equipment\">\r\n    <th mat-header-cell *matHeaderCellDef> #Equipment </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.equipment}} </td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"fromDate\">\r\n    <th mat-header-cell *matHeaderCellDef> From Date </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.fromDate}} </td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"toDate\">\r\n    <th mat-header-cell *matHeaderCellDef> To Date </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.toDate}} </td>\r\n  </ng-container>\r\n\r\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n</table>"
 
 /***/ }),
 
@@ -1137,11 +1261,12 @@ module.exports = "<nav class=\"navbar navbar-dark bg-dark mb-5\">\r\n  <a class=
 /*!********************************************************!*\
   !*** ./src/app/user-project/user-project.component.ts ***!
   \********************************************************/
-/*! exports provided: UserProjectComponent, LoginModal1 */
+/*! exports provided: saveSomeData, UserProjectComponent, LoginModal1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "saveSomeData", function() { return saveSomeData; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserProjectComponent", function() { return UserProjectComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginModal1", function() { return LoginModal1; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
@@ -1165,23 +1290,51 @@ var __param = (undefined && undefined.__param) || function (paramIndex, decorato
 
 
 
+var saveSomeData = {};
 var UserProjectComponent = /** @class */ (function () {
-    function UserProjectComponent(dialog) {
+    function UserProjectComponent(dialog, router) {
         var _this = this;
         this.dialog = dialog;
-        this.ngOnInit = function () {
-        };
+        this.router = router;
+        this.ProjectData = [];
+        this.projectName = "";
+        this.dataSource = [];
+        this.projectData = [];
+        this.displayedColumns = ['projectName', 'employees', 'equipment', 'fromDate', 'toDate'];
         this.openModal = function () {
             _this.dialog.open(LoginModal1);
         };
     }
+    UserProjectComponent.prototype.ngOnInit = function () {
+        this.getProjects();
+    };
+    UserProjectComponent.prototype.getProjects = function () {
+        var _this = this;
+        axios__WEBPACK_IMPORTED_MODULE_3___default.a.get('/getProjects')
+            .then(function (response) {
+            for (var i = 0; i < response.data.length; i++) {
+                _this.ProjectData.push(response.data[i]);
+            }
+            _this.dataSource = _this.ProjectData;
+        })
+            .catch(function (err) {
+            console.log(err);
+        });
+    };
+    //this function to go to th user details page and send the id and name of te project that been selected
+    UserProjectComponent.prototype.forTheNextComponent = function (id, projectName) {
+        if (id === void 0) { id = ''; }
+        if (projectName === void 0) { projectName = ''; }
+        saveSomeData = { id: id, projectName: projectName };
+        this.router.navigate(['user-details']);
+    };
     UserProjectComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-user-project',
             template: __webpack_require__(/*! ./user-project.component.html */ "./src/app/user-project/user-project.component.html"),
             styles: [__webpack_require__(/*! ./user-project.component.css */ "./src/app/user-project/user-project.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]])
+        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], UserProjectComponent);
     return UserProjectComponent;
 }());

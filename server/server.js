@@ -12,6 +12,10 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
+app.put('/saveItems', handler.saveItems)
+app.get('/getProjects', handler.getProjects)
+app.get('/getEquipment', handler.getEquipment)
+app.get('/getEmployee', handler.getEmployee)
 app.put('/updateProject', handler.updateEquipment)
 app.post('/deleteProject', handler.deleteProject)
 app.get('/retrieveProjectData', handler.retrieveProjectData)

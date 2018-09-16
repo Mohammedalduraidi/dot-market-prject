@@ -2,6 +2,44 @@ const db = require('./data-base/index');
 const bcrypt = require('bcryptjs');
 const saltRounds = 10;
 const utility = require('./utility')
+exports.getProjects = (req, res) => {
+    db.projectsSchema.find({}, (err, data) => {
+        if (err) {
+            throw err;
+        }
+        res.send(data)
+    })
+}
+exports.saveItems = (req, res) => {
+    const { employee } = req.body;
+    const { equipment } = req.body
+    const { id } = req.body
+    console.log(id, equipment, employee)
+    db.projectsSchema.update({ _id: id }, { $set: { employee, equipment } }, (err, data) => {
+        if (err) {
+            throw err;
+        }
+        res.sendStatus(200);
+    })
+}
+exports.getEquipment = (req, res) => {
+    db.equipmentSchema.find({}, (err, data) => {
+        if (err) {
+            throw err;
+        }
+        res.send(data);
+    })
+}
+exports.getEmployee = (req, res) => {
+    db.employeesSchema.find({}, (err, data) => {
+        if (err) {
+            throw err;
+        }
+        res.send(data);
+    })
+}
+
+
 exports.updateEquipment = (req, res) => {
     const { name } = req.body;
     const { type } = req.body;

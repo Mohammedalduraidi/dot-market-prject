@@ -9,3 +9,13 @@
       left: 200px;
       margin:5px;
   }
+  .example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 100 1 ;
+  }
+  .btn{
+    margin-left: 100px;
+  }

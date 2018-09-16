@@ -3,7 +3,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Router } from '@angular/router';
 import axios from "axios";
 
-
+export var saveSomeData = {}
 
 @Component({
   selector: 'app-user-project',
@@ -11,13 +11,38 @@ import axios from "axios";
   styleUrls: ['./user-project.component.css']
 })
 export class UserProjectComponent implements OnInit {
+  ProjectData = [];
+  projectName = ""
+  dataSource = [];
+  projectData = []
+  displayedColumns: string[] = ['projectName', 'employees', 'equipment', 'fromDate', 'toDate'];
+  constructor(public dialog: MatDialog, private router: Router) { }
 
-  constructor(public dialog: MatDialog) { }
-
-  ngOnInit = () => {
+  ngOnInit() {
+    this.getProjects()
   }
   openModal = () => {
     this.dialog.open(LoginModal1);
+  }
+
+  getProjects() {
+    axios.get('/getProjects')
+      .then((response) => {
+        for (var i = 0; i < response.data.length; i++) {
+          this.ProjectData.push(response.data[i])
+        }
+        this.dataSource = this.ProjectData;
+
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
+  //this function to go to th user details page and send the id and name of te project that been selected
+  forTheNextComponent(id = '', projectName = '') {
+    saveSomeData = { id: id, projectName: projectName }
+    this.router.navigate(['user-details']);
+
   }
 }
 

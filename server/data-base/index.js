@@ -36,6 +36,8 @@ let projectsSchema = new Schema({
     type: { type: String },
     fromDate: { type: String },
     toDate: { type: String },
+    employee: { type: String },
+    equipment: { type: String }
 })
 adminSchema = mongoose.model('adminSchema', adminSchema);
 equipmentSchema = mongoose.model('equipmentSchema', equipmentSchema);
