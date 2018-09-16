@@ -12,7 +12,6 @@
     1. [Usage](#usage)
 1. [Features](#features)
     1. [Backend](#backend)
-1. [Production](#production)
 
 ## Project description
 
@@ -29,20 +28,20 @@
  * css
  * Bootstrap
  ### Backend
-  * Node/Express
+  * Nodejs/Express
   * MongoDB
 
  ### Deployment
-  * Heroku 
-
+  * Heroku:  `https://manage-system-project.herokuapp.com`
+  * See the website [here](https://manage-system-project.herokuapp.com)
  ### Usage
 
-  * For the frontend
+  * For the angular 6 (frontend)
   * Go to the "manage-project folder" and run `npm install ` then `ng build --watch`
 
   * For Node.js/Express server (backend)
   * make sure that you're in  the root directory and run  `npm install` then run `node server/server.js`
  
-
-## Production
-   * See the website [here](https://manage-system-project.herokuapp.com)
+  * To add equiments, employees or projects, you need to login as admin
+  * admin username:- admin
+  * admin password:- admin
