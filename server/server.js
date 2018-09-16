@@ -29,7 +29,12 @@ app.get('/logout', handler.logout);
 app.get('/*', (req, res) => {
     res.sendFile(path.resolve(path.join(__dirname, '../manage-project/dist/manage-project/index.html')))
 })
-const port = 4000;
-app.listen(port, () => {
-    console.log('Hello world is working on port: ' + port)
-})
+
+const PORT = process.env.PORT || 4000;
+if (!module.parent) {
+    app.listen(PORT, () => {
+        console.log(`Hello world is working on port: ${PORT}`);
+    });
+}
+
+module.exports = app;
