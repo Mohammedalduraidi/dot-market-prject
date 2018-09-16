@@ -5,7 +5,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 //import components
 import { AppComponent } from './app.component';
-import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 import { AdminEmployeeComponent, addEmployeeModal, updateEmployeeModal } from './admin-employee/admin-employee.component';
 import { AdminEquipmentComponent, addModal, updateModal } from './admin-equipment/admin-equipment.component';
 import { AdminProjectComponent, addProject, updateProject } from './admin-project/admin-project.component';
@@ -33,7 +32,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 const appRoutes: Routes = [
   {
     path: '',
-    component: SplashScreenComponent
+    redirectTo: '/user-project',
+    pathMatch: 'full'
   },
   {
     path: 'admin-equipment',
@@ -59,7 +59,6 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    SplashScreenComponent,
     AdminEmployeeComponent,
     AdminEquipmentComponent,
     AdminProjectComponent,

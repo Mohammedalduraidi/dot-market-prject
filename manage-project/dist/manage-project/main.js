@@ -756,24 +756,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _splash_screen_splash_screen_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./splash-screen/splash-screen.component */ "./src/app/splash-screen/splash-screen.component.ts");
-/* harmony import */ var _admin_employee_admin_employee_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./admin-employee/admin-employee.component */ "./src/app/admin-employee/admin-employee.component.ts");
-/* harmony import */ var _admin_equipment_admin_equipment_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./admin-equipment/admin-equipment.component */ "./src/app/admin-equipment/admin-equipment.component.ts");
-/* harmony import */ var _admin_project_admin_project_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./admin-project/admin-project.component */ "./src/app/admin-project/admin-project.component.ts");
-/* harmony import */ var _user_details_user_details_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./user-details/user-details.component */ "./src/app/user-details/user-details.component.ts");
-/* harmony import */ var _user_project_user_project_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./user-project/user-project.component */ "./src/app/user-project/user-project.component.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var ng_drag_drop__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ng-drag-drop */ "./node_modules/ng-drag-drop/index.js");
-/* harmony import */ var ng_drag_drop__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(ng_drag_drop__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/esm5/input.es5.js");
-/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/esm5/icon.es5.js");
-/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
-/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm5/toolbar.es5.js");
-/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/esm5/table.es5.js");
-/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/material/card */ "./node_modules/@angular/material/esm5/card.es5.js");
-/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _admin_employee_admin_employee_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./admin-employee/admin-employee.component */ "./src/app/admin-employee/admin-employee.component.ts");
+/* harmony import */ var _admin_equipment_admin_equipment_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./admin-equipment/admin-equipment.component */ "./src/app/admin-equipment/admin-equipment.component.ts");
+/* harmony import */ var _admin_project_admin_project_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./admin-project/admin-project.component */ "./src/app/admin-project/admin-project.component.ts");
+/* harmony import */ var _user_details_user_details_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./user-details/user-details.component */ "./src/app/user-details/user-details.component.ts");
+/* harmony import */ var _user_project_user_project_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./user-project/user-project.component */ "./src/app/user-project/user-project.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var ng_drag_drop__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ng-drag-drop */ "./node_modules/ng-drag-drop/index.js");
+/* harmony import */ var ng_drag_drop__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(ng_drag_drop__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/esm5/input.es5.js");
+/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/esm5/icon.es5.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm5/toolbar.es5.js");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/esm5/table.es5.js");
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/card */ "./node_modules/@angular/material/esm5/card.es5.js");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -785,7 +784,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 // import angular routing
 
 //import components
-
 
 
 
@@ -808,27 +806,28 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var appRoutes = [
     {
         path: '',
-        component: _splash_screen_splash_screen_component__WEBPACK_IMPORTED_MODULE_4__["SplashScreenComponent"]
+        redirectTo: '/user-project',
+        pathMatch: 'full'
     },
     {
         path: 'admin-equipment',
-        component: _admin_equipment_admin_equipment_component__WEBPACK_IMPORTED_MODULE_6__["AdminEquipmentComponent"]
+        component: _admin_equipment_admin_equipment_component__WEBPACK_IMPORTED_MODULE_5__["AdminEquipmentComponent"]
     },
     {
         path: 'admin-employees',
-        component: _admin_employee_admin_employee_component__WEBPACK_IMPORTED_MODULE_5__["AdminEmployeeComponent"]
+        component: _admin_employee_admin_employee_component__WEBPACK_IMPORTED_MODULE_4__["AdminEmployeeComponent"]
     },
     {
         path: 'admin-projects',
-        component: _admin_project_admin_project_component__WEBPACK_IMPORTED_MODULE_7__["AdminProjectComponent"]
+        component: _admin_project_admin_project_component__WEBPACK_IMPORTED_MODULE_6__["AdminProjectComponent"]
     },
     {
         path: 'user-project',
-        component: _user_project_user_project_component__WEBPACK_IMPORTED_MODULE_9__["UserProjectComponent"]
+        component: _user_project_user_project_component__WEBPACK_IMPORTED_MODULE_8__["UserProjectComponent"]
     },
     {
         path: 'user-details',
-        component: _user_details_user_details_component__WEBPACK_IMPORTED_MODULE_8__["UserDetailsComponent"]
+        component: _user_details_user_details_component__WEBPACK_IMPORTED_MODULE_7__["UserDetailsComponent"]
     }
 ];
 var AppModule = /** @class */ (function () {
@@ -838,135 +837,64 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
-                _splash_screen_splash_screen_component__WEBPACK_IMPORTED_MODULE_4__["SplashScreenComponent"],
-                _admin_employee_admin_employee_component__WEBPACK_IMPORTED_MODULE_5__["AdminEmployeeComponent"],
-                _admin_equipment_admin_equipment_component__WEBPACK_IMPORTED_MODULE_6__["AdminEquipmentComponent"],
-                _admin_project_admin_project_component__WEBPACK_IMPORTED_MODULE_7__["AdminProjectComponent"],
-                _user_details_user_details_component__WEBPACK_IMPORTED_MODULE_8__["UserDetailsComponent"],
-                _user_project_user_project_component__WEBPACK_IMPORTED_MODULE_9__["UserProjectComponent"],
-                _user_project_user_project_component__WEBPACK_IMPORTED_MODULE_9__["LoginModal1"],
-                _user_details_user_details_component__WEBPACK_IMPORTED_MODULE_8__["LoginModal2"],
-                _admin_equipment_admin_equipment_component__WEBPACK_IMPORTED_MODULE_6__["addModal"],
-                _admin_equipment_admin_equipment_component__WEBPACK_IMPORTED_MODULE_6__["updateModal"],
-                _admin_employee_admin_employee_component__WEBPACK_IMPORTED_MODULE_5__["addEmployeeModal"],
-                _admin_employee_admin_employee_component__WEBPACK_IMPORTED_MODULE_5__["updateEmployeeModal"],
-                _admin_project_admin_project_component__WEBPACK_IMPORTED_MODULE_7__["addProject"],
-                _admin_project_admin_project_component__WEBPACK_IMPORTED_MODULE_7__["updateProject"]
+                _admin_employee_admin_employee_component__WEBPACK_IMPORTED_MODULE_4__["AdminEmployeeComponent"],
+                _admin_equipment_admin_equipment_component__WEBPACK_IMPORTED_MODULE_5__["AdminEquipmentComponent"],
+                _admin_project_admin_project_component__WEBPACK_IMPORTED_MODULE_6__["AdminProjectComponent"],
+                _user_details_user_details_component__WEBPACK_IMPORTED_MODULE_7__["UserDetailsComponent"],
+                _user_project_user_project_component__WEBPACK_IMPORTED_MODULE_8__["UserProjectComponent"],
+                _user_project_user_project_component__WEBPACK_IMPORTED_MODULE_8__["LoginModal1"],
+                _user_details_user_details_component__WEBPACK_IMPORTED_MODULE_7__["LoginModal2"],
+                _admin_equipment_admin_equipment_component__WEBPACK_IMPORTED_MODULE_5__["addModal"],
+                _admin_equipment_admin_equipment_component__WEBPACK_IMPORTED_MODULE_5__["updateModal"],
+                _admin_employee_admin_employee_component__WEBPACK_IMPORTED_MODULE_4__["addEmployeeModal"],
+                _admin_employee_admin_employee_component__WEBPACK_IMPORTED_MODULE_4__["updateEmployeeModal"],
+                _admin_project_admin_project_component__WEBPACK_IMPORTED_MODULE_6__["addProject"],
+                _admin_project_admin_project_component__WEBPACK_IMPORTED_MODULE_6__["updateProject"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(appRoutes),
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__["BrowserAnimationsModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__["NoopAnimationsModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_13__["MatButtonModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_13__["MatCheckboxModule"],
-                _angular_material_input__WEBPACK_IMPORTED_MODULE_14__["MatInputModule"],
-                _angular_material_icon__WEBPACK_IMPORTED_MODULE_15__["MatIconModule"],
-                _angular_material_dialog__WEBPACK_IMPORTED_MODULE_16__["MatDialogModule"],
-                _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_17__["MatToolbarModule"],
-                _angular_material_table__WEBPACK_IMPORTED_MODULE_18__["MatTableModule"],
-                ng_drag_drop__WEBPACK_IMPORTED_MODULE_11__["NgDragDropModule"].forRoot(),
-                _angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"],
-                _angular_material_card__WEBPACK_IMPORTED_MODULE_19__["MatCardModule"],
-                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_20__["FlexLayoutModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__["BrowserAnimationsModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__["NoopAnimationsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatCheckboxModule"],
+                _angular_material_input__WEBPACK_IMPORTED_MODULE_13__["MatInputModule"],
+                _angular_material_icon__WEBPACK_IMPORTED_MODULE_14__["MatIconModule"],
+                _angular_material_dialog__WEBPACK_IMPORTED_MODULE_15__["MatDialogModule"],
+                _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_16__["MatToolbarModule"],
+                _angular_material_table__WEBPACK_IMPORTED_MODULE_17__["MatTableModule"],
+                ng_drag_drop__WEBPACK_IMPORTED_MODULE_10__["NgDragDropModule"].forRoot(),
+                _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"],
+                _angular_material_card__WEBPACK_IMPORTED_MODULE_18__["MatCardModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_19__["FlexLayoutModule"],
             ],
             exports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__["BrowserAnimationsModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__["NoopAnimationsModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_13__["MatButtonModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_13__["MatCheckboxModule"],
-                _angular_material_input__WEBPACK_IMPORTED_MODULE_14__["MatInputModule"],
-                _angular_material_icon__WEBPACK_IMPORTED_MODULE_15__["MatIconModule"],
-                _angular_material_dialog__WEBPACK_IMPORTED_MODULE_16__["MatDialogModule"],
-                _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_17__["MatToolbarModule"],
-                _angular_material_table__WEBPACK_IMPORTED_MODULE_18__["MatTableModule"],
-                _angular_material_card__WEBPACK_IMPORTED_MODULE_19__["MatCardModule"]
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__["BrowserAnimationsModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__["NoopAnimationsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatCheckboxModule"],
+                _angular_material_input__WEBPACK_IMPORTED_MODULE_13__["MatInputModule"],
+                _angular_material_icon__WEBPACK_IMPORTED_MODULE_14__["MatIconModule"],
+                _angular_material_dialog__WEBPACK_IMPORTED_MODULE_15__["MatDialogModule"],
+                _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_16__["MatToolbarModule"],
+                _angular_material_table__WEBPACK_IMPORTED_MODULE_17__["MatTableModule"],
+                _angular_material_card__WEBPACK_IMPORTED_MODULE_18__["MatCardModule"]
             ], entryComponents: [
-                _user_project_user_project_component__WEBPACK_IMPORTED_MODULE_9__["LoginModal1"],
-                _user_details_user_details_component__WEBPACK_IMPORTED_MODULE_8__["LoginModal2"],
-                _admin_equipment_admin_equipment_component__WEBPACK_IMPORTED_MODULE_6__["addModal"],
-                _admin_equipment_admin_equipment_component__WEBPACK_IMPORTED_MODULE_6__["updateModal"],
-                _admin_employee_admin_employee_component__WEBPACK_IMPORTED_MODULE_5__["addEmployeeModal"],
-                _admin_employee_admin_employee_component__WEBPACK_IMPORTED_MODULE_5__["updateEmployeeModal"],
-                _admin_project_admin_project_component__WEBPACK_IMPORTED_MODULE_7__["addProject"],
-                _admin_project_admin_project_component__WEBPACK_IMPORTED_MODULE_7__["updateProject"]
+                _user_project_user_project_component__WEBPACK_IMPORTED_MODULE_8__["LoginModal1"],
+                _user_details_user_details_component__WEBPACK_IMPORTED_MODULE_7__["LoginModal2"],
+                _admin_equipment_admin_equipment_component__WEBPACK_IMPORTED_MODULE_5__["addModal"],
+                _admin_equipment_admin_equipment_component__WEBPACK_IMPORTED_MODULE_5__["updateModal"],
+                _admin_employee_admin_employee_component__WEBPACK_IMPORTED_MODULE_4__["addEmployeeModal"],
+                _admin_employee_admin_employee_component__WEBPACK_IMPORTED_MODULE_4__["updateEmployeeModal"],
+                _admin_project_admin_project_component__WEBPACK_IMPORTED_MODULE_6__["addProject"],
+                _admin_project_admin_project_component__WEBPACK_IMPORTED_MODULE_6__["updateProject"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/splash-screen/splash-screen.component.css":
-/*!***********************************************************!*\
-  !*** ./src/app/splash-screen/splash-screen.component.css ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/splash-screen/splash-screen.component.html":
-/*!************************************************************!*\
-  !*** ./src/app/splash-screen/splash-screen.component.html ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div>\n  <img src='https://media.licdn.com/dms/image/C560BAQGrzdagbTuBmg/company-logo_200_200/0?e=1544659200&v=beta&t=hiDsFnIbA_WjGTDU1nOrL66DZP7VNgEHCJgtt1gcuz8'\n    alt='' class='img'>\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/splash-screen/splash-screen.component.ts":
-/*!**********************************************************!*\
-  !*** ./src/app/splash-screen/splash-screen.component.ts ***!
-  \**********************************************************/
-/*! exports provided: SplashScreenComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SplashScreenComponent", function() { return SplashScreenComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var SplashScreenComponent = /** @class */ (function () {
-    function SplashScreenComponent(router) {
-        this.router = router;
-    }
-    SplashScreenComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        setTimeout(function () {
-            _this.router.navigate(['user-project']);
-        }, 3000);
-    };
-    SplashScreenComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-splash-screen',
-            template: __webpack_require__(/*! ./splash-screen.component.html */ "./src/app/splash-screen/splash-screen.component.html"),
-            styles: [__webpack_require__(/*! ./splash-screen.component.css */ "./src/app/splash-screen/splash-screen.component.css")]
-        }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
-    ], SplashScreenComponent);
-    return SplashScreenComponent;
 }());
 
 
