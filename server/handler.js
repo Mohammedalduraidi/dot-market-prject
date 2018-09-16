@@ -17,7 +17,6 @@ exports.saveItems = (req, res) => {
     const { employee } = req.body;
     const { equipment } = req.body
     const { id } = req.body
-    console.log(id, equipment, employee)
     db.projectsSchema.update({ _id: id }, { $set: { employee, equipment } }, (err, data) => {
         if (err) {
             throw err;

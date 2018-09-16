@@ -1137,16 +1137,12 @@ var UserDetailsComponent = /** @class */ (function () {
     // save the dropped items in the database
     UserDetailsComponent.prototype.save = function () {
         var _this = this;
+        // checking before http request, if the user has drag and drop his employee or equipment
         if (this.droppedEmployee[0] === undefined) {
-            this.droppedEmployee[0] = { name: '' };
+            alert('please assign employee before save <3 ');
         }
-        if (this.droppedEquipment[0] === undefined) {
-            this.droppedEquipment[0] = { name: '' };
-        }
-        if (this.droppedEquipment[0].name.length === 0 && this.droppedEmployee[0].name.length === 0) {
-            alert('please assign employee and equipment before save <3 ');
-            this.droppedEmployee.pop();
-            this.droppedEquipment.pop();
+        else if (this.droppedEquipment[0] === undefined) {
+            alert('please assign equipment before save <3 ');
         }
         else {
             return axios__WEBPACK_IMPORTED_MODULE_3___default.a.put("/saveItems", { id: this.id, employee: this.droppedEmployee[0].name, equipment: this.droppedEquipment[0].name })
