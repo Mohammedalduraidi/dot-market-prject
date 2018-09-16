@@ -25,9 +25,9 @@
 <br><br>
 <div class="container">
   <div class="row">
-    <div class="col-lg-4 d-flex align-items-stretch">
+    <div class="col-lg-4 d-flex align-items-stretch" *ngFor="let equip of equipmentsData">
 
-      <div class="card" *ngFor="let equip of equipmentsData">
+      <div class="card">
         <div class="card-body">
           <img class="card-img-top img" src="{{equip.image}}" alt='Equipment image'>
           <h5 class="card-title">Equipment Name: {{equip.name}}</h5>
