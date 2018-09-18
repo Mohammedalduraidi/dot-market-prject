@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test1": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha server/test"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,9 @@
     "bcryptjs": "^2.4.3",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
+    "mocha": "^5.2.0",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
     "mongoose": "^5.2.14",
     "path": "^0.12.7"
   }
