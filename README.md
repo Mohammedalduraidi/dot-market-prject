@@ -22,7 +22,7 @@
 
 ## Frameworks used
 
- ### Frondend
+ ### Frontend
  * Angular 6
  * Material-ui
  * css
@@ -33,7 +33,8 @@
 
  ### Deployment
   * Heroku:  `https://manage-system-project.herokuapp.com`
-  * See the website [here](https://manage-system-project.herokuapp.com)
+  * See the website [here](https://manage-system-project.herokuapp.com) [https://manage-system-project.herokuapp.com](https://manage-system-project.herokuapp.com)
+
  ### Usage
 
   * For the angular 6 (frontend)
@@ -41,7 +42,9 @@
 
   * For Node.js/Express server (backend)
   * make sure that you're in  the root directory and run  `npm install` then run `node server/server.js`
- 
+  * For the unit api test
+  * make sure that you're in the root directory and run `npm run test`
+
   * To add equiments, employees or projects, you need to login as admin
   * admin username:- admin
   * admin password:- admin
