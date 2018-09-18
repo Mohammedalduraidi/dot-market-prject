@@ -6,7 +6,7 @@
 
 1. [Project description](#project-description)
 1. [Frameworks used](#frameworks-used)
-    1. [Frondend](#frontend)
+    1. [Frontend](#frontend)
     1. [Backend](#backend)
     1. [Deployment](#deployment)
     1. [Usage](#usage)
