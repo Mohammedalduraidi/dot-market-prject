@@ -46,18 +46,37 @@ exports.getEmployee = (req, res) => {
 
 //update equipments in data base
 exports.updateProject = (req, res) => {
-    const { name } = req.body;
-    const { type } = req.body;
-    const { fromDate } = req.body;
-    const { toDate } = req.body;
-    const { id } = req.body
-    db.projectsSchema.findOneAndUpdate({ _id: id }, { $set: { name, type, fromDate, toDate } }, (err, data) => {
+    var { name } = req.body;
+    var { type } = req.body;
+    var { fromDate } = req.body;
+    var { toDate } = req.body;
+    var { id } = req.body
+
+    db.projectsSchema.findOne({ _id: id }, (err, data) => {
         if (err) {
             throw err;
-        } else {
-            res.sendStatus(200);
         }
-    });
+        if (name.length === 0) {
+            name = data.name;
+        }
+        if (type.length === 0) {
+            type = data.type;
+        }
+        if (fromDate.length === 0) {
+            fromDate = data.fromDate;
+        }
+        if (toDate.length === 0) {
+            toDate = data.toDate;
+        }
+        db.projectsSchema.findOneAndUpdate({ _id: id }, { $set: { name, type, fromDate, toDate } }, (err, data) => {
+            if (err) {
+                throw err;
+            } else {
+                res.sendStatus(200);
+            }
+        });
+    })
+
 }
 //delete project from data base
 exports.deleteProject = (req, res) => {
@@ -105,17 +124,24 @@ exports.addProject = (req, res) => {
 
 //Update employees from data-base
 exports.updateEmployee = (req, res) => {
-    const { name } = req.body;
-    const { Nationality } = req.body;
-    const { jobTitle } = req.body;
-    const { id } = req.body
-    db.employeesSchema.findOneAndUpdate({ _id: id }, { $set: { name, Nationality, jobTitle } }, (err, data) => {
-        if (err) {
-            throw err;
-        } else {
-            res.sendStatus(200);
-        }
-    });
+    var { name } = req.body;
+    var { Nationality } = req.body;
+    var { jobTitle } = req.body;
+    var { id } = req.body;
+    db.employeesSchema.findOne({ _id: id }, (err, data) => {
+        if (err) { throw err; }
+        if (name.length === 0) { name = data.name; }
+        if (Nationality.length === 0) { Nationality = data.Nationality; }
+        if (jobTitle.length === 0) { jobTitle = data.jobTitle; }
+        db.employeesSchema.findOneAndUpdate({ _id: id }, { $set: { name, Nationality, jobTitle } }, (err, data) => {
+            if (err) {
+                throw err;
+            } else {
+                res.sendStatus(200);
+            }
+        });
+    })
+
 }
 
 
@@ -165,17 +191,25 @@ exports.addEmployee = (req, res) => {
 
 //Update Equipment from data-base
 exports.updateEquipment = (req, res) => {
-    const { name } = req.body;
-    const { serialNumber } = req.body;
-    const { image } = req.body;
-    const { id } = req.body
-    db.equipmentSchema.findOneAndUpdate({ _id: id }, { $set: { name, serialNumber, image } }, (err, data) => {
-        if (err) {
-            throw err;
-        } else {
-            res.sendStatus(200);
-        }
-    });
+    var { name } = req.body;
+    var { serialNumber } = req.body;
+    var { image } = req.body;
+    var { id } = req.body
+    db.equipmentSchema.findOne({ _id: id }, (err, data) => {
+        if (err) { throw err; }
+        if (name.length === 0) { name = data.name; }
+        if (serialNumber.length === 0) { serialNumber = data.serialNumber; }
+        if (image.length === 0) { image = data.image; }
+        db.equipmentSchema.findOneAndUpdate({ _id: id }, { $set: { name, serialNumber, image } }, (err, data) => {
+            if (err) {
+                throw err;
+            } else {
+                res.sendStatus(200);
+            }
+        });
+
+    })
+
 }
 
 
