@@ -74,7 +74,7 @@ export class AdminEquipmentComponent implements OnInit {
   templateUrl: 'add-modal.html',
 })
 export class addModal {
-  selectedImage: File;
+  selectedImage = ''; 
   constructor(
     public dialogRef: MatDialogRef<AdminEquipmentComponent>,
     @Inject(MAT_DIALOG_DATA) public data: addModal) { }
@@ -111,7 +111,7 @@ export class addModal {
   templateUrl: 'update-modal.html',
 })
 export class updateModal {
-  selectedImage: File;
+  selectedImage = '';
   constructor(
     public dialogRef: MatDialogRef<AdminEquipmentComponent>,
     @Inject(MAT_DIALOG_DATA) public data: updateModal) { }

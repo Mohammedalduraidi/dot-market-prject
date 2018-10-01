@@ -195,11 +195,12 @@ exports.updateEquipment = (req, res) => {
     var { serialNumber } = req.body;
     var { image } = req.body;
     var { id } = req.body
+    console.log("jackel is here", image)
     db.equipmentSchema.findOne({ _id: id }, (err, data) => {
         if (err) { throw err; }
         if (name.length === 0) { name = data.name; }
         if (serialNumber.length === 0) { serialNumber = data.serialNumber; }
-        if (image.length === 0) { image = data.image; }
+            if (image.length === 0) { image = data.image; }
         db.equipmentSchema.findOneAndUpdate({ _id: id }, { $set: { name, serialNumber, image } }, (err, data) => {
             if (err) {
                 throw err;

@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 mat-dialog-title>Add Employee</h1>\r\n<div mat-dialog-content>\r\n    <mat-form-field class=\"full-width\">\r\n        <input matInput type=\"text\" placeholder=\"Employee Name\" [(ngModel)]=\"name\">\r\n    </mat-form-field>\r\n    <br>\r\n    <mat-form-field class=\"full-width\">\r\n        <input matInput type=\"text\" placeholder=\"Employee Nationality\" [(ngModel)]=\"Nationality\">\r\n    </mat-form-field>\r\n    <br>\r\n    <mat-form-field class=\"full-width\">\r\n        <input matInput type=\"text\" placeholder=\"Employee Job Title\" [(ngModel)]=\"jobTitle\">\r\n    </mat-form-field>\r\n    <br>\r\n\r\n</div>\r\n<div mat-dialog-actions>\r\n    <button mat-button (click)=\"Cancel()\">Cancel</button>\r\n    <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial (click)=\"addEmployee(name , Nationality,jobTitle)\">Add</button>\r\n</div>"
+module.exports = "<h1 mat-dialog-title>Add Employee</h1>\n<div mat-dialog-content>\n    <mat-form-field class=\"full-width\">\n        <input matInput type=\"text\" placeholder=\"Employee Name\" [(ngModel)]=\"name\">\n    </mat-form-field>\n    <br>\n    <mat-form-field class=\"full-width\">\n        <input matInput type=\"text\" placeholder=\"Employee Nationality\" [(ngModel)]=\"Nationality\">\n    </mat-form-field>\n    <br>\n    <mat-form-field class=\"full-width\">\n        <input matInput type=\"text\" placeholder=\"Employee Job Title\" [(ngModel)]=\"jobTitle\">\n    </mat-form-field>\n    <br>\n\n</div>\n<div mat-dialog-actions>\n    <button mat-button (click)=\"Cancel()\">Cancel</button>\n    <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial (click)=\"addEmployee(name , Nationality,jobTitle)\">Add</button>\n</div>"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<h1 mat-dialog-title>Add Employee</h1>\r\n<div mat-dialog-cont
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".icon {\r\n    padding: 0 14px;\r\n  }\r\n  \r\n  .spacer {\r\n    flex: 100 1 ;\r\n  }\r\n  \r\n  .navButton {\r\n      left: 200px;\r\n      margin:5px;\r\n  }\r\n  \r\n  .card{\r\n    min-height: 200px;\r\n    width: 300px;\r\n    padding-left: 40px;\r\n  }"
+module.exports = ".icon {\n    padding: 0 14px;\n  }\n  \n  .spacer {\n    flex: 100 1 ;\n  }\n  \n  .navButton {\n      left: 200px;\n      margin:5px;\n  }\n  \n  .card{\n    min-height: 200px;\n    width: 300px;\n    padding-left: 40px;\n  }"
 
 /***/ }),
 
@@ -230,7 +230,7 @@ var updateEmployeeModal = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 mat-dialog-title>Update Employee</h1>\r\n<div mat-dialog-content>\r\n    <mat-form-field class=\"full-width\">\r\n        <input matInput type=\"text\" placeholder=\"Employee Name\" [(ngModel)]=\"name\">\r\n    </mat-form-field>\r\n    <br>\r\n    <mat-form-field class=\"full-width\">\r\n        <input matInput type=\"text\" placeholder=\"Employee Nationality\" [(ngModel)]=\"Nationality\">\r\n    </mat-form-field>\r\n    <br>\r\n    <mat-form-field class=\"full-width\">\r\n        <input matInput type=\"text\" placeholder=\"Employee Job Title\" [(ngModel)]=\"jobTitle\">\r\n    </mat-form-field>\r\n    <br>\r\n</div>\r\n<div mat-dialog-actions>\r\n    <button mat-button (click)=\"Cancel()\">Cancel</button>\r\n    <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial (click)=\"updateEmployee(name,Nationality,jobTitle)\">Update</button>\r\n</div>"
+module.exports = "<h1 mat-dialog-title>Update Employee</h1>\n<div mat-dialog-content>\n    <mat-form-field class=\"full-width\">\n        <input matInput type=\"text\" placeholder=\"Employee Name\" [(ngModel)]=\"name\">\n    </mat-form-field>\n    <br>\n    <mat-form-field class=\"full-width\">\n        <input matInput type=\"text\" placeholder=\"Employee Nationality\" [(ngModel)]=\"Nationality\">\n    </mat-form-field>\n    <br>\n    <mat-form-field class=\"full-width\">\n        <input matInput type=\"text\" placeholder=\"Employee Job Title\" [(ngModel)]=\"jobTitle\">\n    </mat-form-field>\n    <br>\n</div>\n<div mat-dialog-actions>\n    <button mat-button (click)=\"Cancel()\">Cancel</button>\n    <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial (click)=\"updateEmployee(name,Nationality,jobTitle)\">Update</button>\n</div>"
 
 /***/ }),
 
@@ -241,7 +241,7 @@ module.exports = "<h1 mat-dialog-title>Update Employee</h1>\r\n<div mat-dialog-c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 mat-dialog-title>Add Equipment</h1>\r\n<div mat-dialog-content>\r\n    <mat-form-field class=\"full-width\">\r\n        <input matInput type=\"text\" placeholder=\"Equipment Name\" [(ngModel)]=\"name\">\r\n    </mat-form-field>\r\n    <br>\r\n    <mat-form-field class=\"full-width\">\r\n        <input matInput type=\"text\" placeholder=\"Equipment serial-number\" [(ngModel)]=\"serialNumber\">\r\n    </mat-form-field>\r\n    <br>\r\n\r\n    <input type=\"file\" placeholder=\"equipment attachment\" (change)=\"uploadImage($event)\">\r\n</div>\r\n<div mat-dialog-actions>\r\n    <button mat-button (click)=\"Cancel()\">Cancel</button>\r\n    <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial (click)=\"addEquiepment(name , serialNumber)\">Add</button>\r\n</div>\r\n"
+module.exports = "<h1 mat-dialog-title>Add Equipment</h1>\n<div mat-dialog-content>\n    <mat-form-field class=\"full-width\">\n        <input matInput type=\"text\" placeholder=\"Equipment Name\" [(ngModel)]=\"name\">\n    </mat-form-field>\n    <br>\n    <mat-form-field class=\"full-width\">\n        <input matInput type=\"text\" placeholder=\"Equipment serial-number\" [(ngModel)]=\"serialNumber\">\n    </mat-form-field>\n    <br>\n\n    <input type=\"file\" placeholder=\"equipment attachment\" (change)=\"uploadImage($event)\">\n</div>\n<div mat-dialog-actions>\n    <button mat-button (click)=\"Cancel()\">Cancel</button>\n    <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial (click)=\"addEquiepment(name , serialNumber)\">Add</button>\n</div>\n"
 
 /***/ }),
 
@@ -252,7 +252,7 @@ module.exports = "<h1 mat-dialog-title>Add Equipment</h1>\r\n<div mat-dialog-con
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".icon {\r\n    padding: 0 14px;\r\n  }\r\n  \r\n  .spacer {\r\n    flex: 100 1 ;\r\n  }\r\n  \r\n  .navButton {\r\n      left: 200px;\r\n      margin:5px;\r\n  }\r\n  \r\n  .img{\r\n   width:150px;\r\n   height: 100px;\r\n }\r\n  \r\n  .card{\r\n  min-height: 200px;\r\n  width: 300px;\r\n  padding-left: 40px;\r\n}"
+module.exports = ".icon {\n    padding: 0 14px;\n  }\n  \n  .spacer {\n    flex: 100 1 ;\n  }\n  \n  .navButton {\n      left: 200px;\n      margin:5px;\n  }\n  \n  .img{\n   width:150px;\n   height: 100px;\n }\n  \n  .card{\n  min-height: 200px;\n  width: 300px;\n  padding-left: 40px;\n}"
 
 /***/ }),
 
@@ -373,6 +373,7 @@ var addModal = /** @class */ (function () {
         var _this = this;
         this.dialogRef = dialogRef;
         this.data = data;
+        this.selectedImage = '';
         this.uploadImage = function (event) {
             var photo = event.target.files[0];
             var that = _this;
@@ -415,6 +416,7 @@ var updateModal = /** @class */ (function () {
         var _this = this;
         this.dialogRef = dialogRef;
         this.data = data;
+        this.selectedImage = '';
         this.uploadImage = function (event) {
             var photo = event.target.files[0];
             var that = _this;
@@ -464,7 +466,7 @@ var updateModal = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 mat-dialog-title>Update Equipment</h1>\r\n<div mat-dialog-content>\r\n        <input type=\"file\" placeholder=\"update attachment\" (change)=\"uploadImage($event)\">\r\n    <mat-form-field class=\"example-full-width\">\r\n        <input matInput type=\"text\" placeholder=\"equipment name\" [(ngModel)]=\"name\">\r\n    </mat-form-field>\r\n    <br>\r\n    <mat-form-field class=\"example-full-width\">\r\n        <input matInput type=\"text\" placeholder=\"equipment serialNumber\" [(ngModel)]=\"serialNumber\">\r\n    </mat-form-field>\r\n    <br>\r\n</div>\r\n<div mat-dialog-actions>\r\n    <button mat-button (click)=\"Cancel()\">Cancel</button>\r\n    <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial (click)=\"updateEquipment(name,serialNumber)\">Update</button>\r\n</div>"
+module.exports = "<h1 mat-dialog-title>Update Equipment</h1>\n<div mat-dialog-content>\n        <input type=\"file\" placeholder=\"update attachment\" (change)=\"uploadImage($event)\">\n    <mat-form-field class=\"example-full-width\">\n        <input matInput type=\"text\" placeholder=\"equipment name\" [(ngModel)]=\"name\">\n    </mat-form-field>\n    <br>\n    <mat-form-field class=\"example-full-width\">\n        <input matInput type=\"text\" placeholder=\"equipment serialNumber\" [(ngModel)]=\"serialNumber\">\n    </mat-form-field>\n    <br>\n</div>\n<div mat-dialog-actions>\n    <button mat-button (click)=\"Cancel()\">Cancel</button>\n    <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial (click)=\"updateEquipment(name,serialNumber)\">Update</button>\n</div>"
 
 /***/ }),
 
@@ -475,7 +477,7 @@ module.exports = "<h1 mat-dialog-title>Update Equipment</h1>\r\n<div mat-dialog-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 mat-dialog-title>Add Project</h1>\r\n<div mat-dialog-content>\r\n    <mat-form-field class=\"full-width\">\r\n        <input matInput type=\"text\" placeholder=\"Project Name\" [(ngModel)]=\"name\">\r\n    </mat-form-field>\r\n    <br>\r\n    <mat-form-field class=\"full-width\">\r\n        <input matInput type=\"text\" placeholder=\"Project Type\" [(ngModel)]=\"type\">\r\n    </mat-form-field>\r\n    <br>\r\n    <mat-form-field>\r\n        <input matInput [matDatepicker]=\"fromdata\" placeholder=\"Project from\" [(ngModel)]=\"fromDate\">\r\n        <mat-datepicker-toggle matSuffix [for]=\"fromdata\"></mat-datepicker-toggle>\r\n        <mat-datepicker #fromdata></mat-datepicker>\r\n    </mat-form-field>\r\n    <br>\r\n    <mat-form-field>\r\n        <input matInput [matDatepicker]=\"todate\" placeholder=\"Project to\" [(ngModel)]=\"toDate\">\r\n        <mat-datepicker-toggle matSuffix [for]=\"todate\"></mat-datepicker-toggle>\r\n        <mat-datepicker #todate></mat-datepicker>\r\n    </mat-form-field>\r\n</div>\r\n<div mat-dialog-actions>\r\n    <button mat-button (click)=\"Cancel()\">Cancel</button>\r\n    <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial (click)=\"addProject(name , type,fromDate, toDate)\">Add</button>\r\n</div>"
+module.exports = "<h1 mat-dialog-title>Add Project</h1>\n<div mat-dialog-content>\n    <mat-form-field class=\"full-width\">\n        <input matInput type=\"text\" placeholder=\"Project Name\" [(ngModel)]=\"name\">\n    </mat-form-field>\n    <br>\n    <mat-form-field class=\"full-width\">\n        <input matInput type=\"text\" placeholder=\"Project Type\" [(ngModel)]=\"type\">\n    </mat-form-field>\n    <br>\n    <mat-form-field>\n        <input matInput [matDatepicker]=\"fromdata\" placeholder=\"Project from\" [(ngModel)]=\"fromDate\">\n        <mat-datepicker-toggle matSuffix [for]=\"fromdata\"></mat-datepicker-toggle>\n        <mat-datepicker #fromdata></mat-datepicker>\n    </mat-form-field>\n    <br>\n    <mat-form-field>\n        <input matInput [matDatepicker]=\"todate\" placeholder=\"Project to\" [(ngModel)]=\"toDate\">\n        <mat-datepicker-toggle matSuffix [for]=\"todate\"></mat-datepicker-toggle>\n        <mat-datepicker #todate></mat-datepicker>\n    </mat-form-field>\n</div>\n<div mat-dialog-actions>\n    <button mat-button (click)=\"Cancel()\">Cancel</button>\n    <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial (click)=\"addProject(name , type,fromDate, toDate)\">Add</button>\n</div>"
 
 /***/ }),
 
@@ -486,7 +488,7 @@ module.exports = "<h1 mat-dialog-title>Add Project</h1>\r\n<div mat-dialog-conte
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".icon {\r\n    padding: 0 14px;\r\n  }\r\n  \r\n  .spacer {\r\n    flex: 100 1 ;\r\n  }\r\n  \r\n  .navButton {\r\n      left: 200px;\r\n      margin:5px;\r\n  }\r\n  \r\n  .card{\r\n    min-height: 200px;\r\n    width: 300px;\r\n    padding-left: 40px;\r\n  }"
+module.exports = ".icon {\n    padding: 0 14px;\n  }\n  \n  .spacer {\n    flex: 100 1 ;\n  }\n  \n  .navButton {\n      left: 200px;\n      margin:5px;\n  }\n  \n  .card{\n    min-height: 200px;\n    width: 300px;\n    padding-left: 40px;\n  }"
 
 /***/ }),
 
@@ -677,7 +679,7 @@ var updateProject = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 mat-dialog-title>Update project</h1>\r\n<div mat-dialog-content>\r\n    <mat-form-field class=\"full-width\">\r\n        <input matInput type=\"text\" placeholder=\"Project Name\" [(ngModel)]=\"name\">\r\n    </mat-form-field>\r\n    <br>\r\n    <mat-form-field class=\"full-width\">\r\n        <input matInput type=\"text\" placeholder=\"Project Type\" [(ngModel)]=\"type\">\r\n    </mat-form-field>\r\n    <br>\r\n    <mat-form-field>\r\n        <input matInput [matDatepicker]=\"fromdata\" placeholder=\"Project from\" [(ngModel)]=\"fromDate\">\r\n        <mat-datepicker-toggle matSuffix [for]=\"fromdata\"></mat-datepicker-toggle>\r\n        <mat-datepicker #fromdata></mat-datepicker>\r\n    </mat-form-field>\r\n    <br>\r\n    <mat-form-field>\r\n        <input matInput [matDatepicker]=\"todate\" placeholder=\"Project to\" [(ngModel)]=\"toDate\">\r\n        <mat-datepicker-toggle matSuffix [for]=\"todate\"></mat-datepicker-toggle>\r\n        <mat-datepicker #todate></mat-datepicker>\r\n    </mat-form-field>\r\n</div>\r\n<div mat-dialog-actions>\r\n    <button mat-button (click)=\"Cancel()\">Cancel</button>\r\n    <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial (click)=\"updateProject(name,type,fromDate,toDate)\">Update</button>\r\n</div>"
+module.exports = "<h1 mat-dialog-title>Update project</h1>\n<div mat-dialog-content>\n    <mat-form-field class=\"full-width\">\n        <input matInput type=\"text\" placeholder=\"Project Name\" [(ngModel)]=\"name\">\n    </mat-form-field>\n    <br>\n    <mat-form-field class=\"full-width\">\n        <input matInput type=\"text\" placeholder=\"Project Type\" [(ngModel)]=\"type\">\n    </mat-form-field>\n    <br>\n    <mat-form-field>\n        <input matInput [matDatepicker]=\"fromdata\" placeholder=\"Project from\" [(ngModel)]=\"fromDate\">\n        <mat-datepicker-toggle matSuffix [for]=\"fromdata\"></mat-datepicker-toggle>\n        <mat-datepicker #fromdata></mat-datepicker>\n    </mat-form-field>\n    <br>\n    <mat-form-field>\n        <input matInput [matDatepicker]=\"todate\" placeholder=\"Project to\" [(ngModel)]=\"toDate\">\n        <mat-datepicker-toggle matSuffix [for]=\"todate\"></mat-datepicker-toggle>\n        <mat-datepicker #todate></mat-datepicker>\n    </mat-form-field>\n</div>\n<div mat-dialog-actions>\n    <button mat-button (click)=\"Cancel()\">Cancel</button>\n    <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial (click)=\"updateProject(name,type,fromDate,toDate)\">Update</button>\n</div>"
 
 /***/ }),
 
@@ -909,7 +911,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 mat-dialog-title>Login as admin</h1>\r\n<div mat-dialog-content>\r\n\t <mat-form-field class=\"example-full-width\">\r\n    <input matInput type=\"text\" placeholder=\"Enter Admin Username\" [(ngModel)]=\"name\">\r\n  </mat-form-field>\r\n  <br>\r\n  \r\n <mat-form-field class=\"example-full-width\">\r\n    <input matInput type=\"password\" placeholder=\"Enter Admin Password\" [(ngModel)]=\"password\" >\r\n  </mat-form-field>\r\n  <br>\r\n</div>\r\n<div mat-dialog-actions>\r\n  <button mat-button (click)=\"cancel()\">Cancel</button>\r\n  <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial (click)=\"login(name,password)\">Submit</button>\r\n</div>"
+module.exports = "<h1 mat-dialog-title>Login as admin</h1>\n<div mat-dialog-content>\n\t <mat-form-field class=\"example-full-width\">\n    <input matInput type=\"text\" placeholder=\"Enter Admin Username\" [(ngModel)]=\"name\">\n  </mat-form-field>\n  <br>\n  \n <mat-form-field class=\"example-full-width\">\n    <input matInput type=\"password\" placeholder=\"Enter Admin Password\" [(ngModel)]=\"password\" >\n  </mat-form-field>\n  <br>\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"cancel()\">Cancel</button>\n  <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial (click)=\"login(name,password)\">Submit</button>\n</div>"
 
 /***/ }),
 
@@ -920,7 +922,7 @@ module.exports = "<h1 mat-dialog-title>Login as admin</h1>\r\n<div mat-dialog-co
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".icon {\r\n    padding: 0 14px;\r\n  }\r\n  \r\n  .spacer {\r\n    flex: 100 1 ;\r\n  }\r\n  \r\n  .navButton {\r\n      left: 200px;\r\n      margin:5px;\r\n  }\r\n  \r\n  .example-icon {\r\n    padding: 0 14px;\r\n  }\r\n  \r\n  .example-spacer {\r\n    flex: 100 1 ;\r\n  }\r\n  \r\n  .btn{\r\n    margin-left: 100px;\r\n  }"
+module.exports = ".icon {\n    padding: 0 14px;\n  }\n  \n  .spacer {\n    flex: 100 1 ;\n  }\n  \n  .navButton {\n      left: 200px;\n      margin:5px;\n  }\n  \n  .example-icon {\n    padding: 0 14px;\n  }\n  \n  .example-spacer {\n    flex: 100 1 ;\n  }\n  \n  .btn{\n    margin-left: 100px;\n  }"
 
 /***/ }),
 
@@ -1162,7 +1164,7 @@ var LoginModal2 = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 mat-dialog-title>Login as admin</h1>\r\n<div mat-dialog-content>\r\n\t <mat-form-field class=\"example-full-width\">\r\n    <input matInput type=\"text\" placeholder=\"Enter Admin Username\" [(ngModel)]=\"name\">\r\n  </mat-form-field>\r\n  <br>\r\n  \r\n <mat-form-field class=\"example-full-width\">\r\n    <input matInput type=\"password\" placeholder=\"Enter Admin Password\" [(ngModel)]=\"password\" >\r\n  </mat-form-field>\r\n  <br>\r\n</div>\r\n<div mat-dialog-actions>\r\n  <button mat-button (click)=\"cancel()\">Cancel</button>\r\n  <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial (click)=\"login(name,password)\">Submit</button>\r\n</div>"
+module.exports = "<h1 mat-dialog-title>Login as admin</h1>\n<div mat-dialog-content>\n\t <mat-form-field class=\"example-full-width\">\n    <input matInput type=\"text\" placeholder=\"Enter Admin Username\" [(ngModel)]=\"name\">\n  </mat-form-field>\n  <br>\n  \n <mat-form-field class=\"example-full-width\">\n    <input matInput type=\"password\" placeholder=\"Enter Admin Password\" [(ngModel)]=\"password\" >\n  </mat-form-field>\n  <br>\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"cancel()\">Cancel</button>\n  <button mat-button [mat-dialog-close]=\"data\" cdkFocusInitial (click)=\"login(name,password)\">Submit</button>\n</div>"
 
 /***/ }),
 
@@ -1173,7 +1175,7 @@ module.exports = "<h1 mat-dialog-title>Login as admin</h1>\r\n<div mat-dialog-co
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".icon {\r\n    padding: 0 14px;\r\n  }\r\n  \r\n  .spacer {\r\n    flex: 100 1 ;\r\n  }\r\n  \r\n  .navButton {\r\n      left: 200px;\r\n      margin:5px;\r\n  }\r\n  \r\n  table {\r\n    width: 100%;\r\n  } "
+module.exports = ".icon {\n    padding: 0 14px;\n  }\n  \n  .spacer {\n    flex: 100 1 ;\n  }\n  \n  .navButton {\n      left: 200px;\n      margin:5px;\n  }\n  \n  table {\n    width: 100%;\n  } "
 
 /***/ }),
 
@@ -1184,7 +1186,7 @@ module.exports = ".icon {\r\n    padding: 0 14px;\r\n  }\r\n  \r\n  .spacer {\r\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-dark bg-dark mb-5\">\r\n  <a class=\"navbar-brand\" routerLink=\"/user-project\">Manage Project</a>\r\n  <div class=\"navbar-expand ml-auto navbar-nav\">\r\n    <div class=\"navbar-brand\">\r\n      <a (click)=\"openModal()\">Admin Login\r\n        <mat-icon class=\"icon\">person</mat-icon>\r\n      </a>\r\n    </div>\r\n  </div>\r\n</nav>\r\n<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\r\n  <ng-container matColumnDef=\"projectName\">\r\n    <th mat-header-cell *matHeaderCellDef> Project Name </th>\r\n    <td mat-cell *matCellDef=\"let element\"><a (click)=\"forTheNextComponent(element._id, element.name)\">{{element.name}}\r\n      </a></td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"employees\">\r\n    <th mat-header-cell *matHeaderCellDef> #Employees </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.employee}} </td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"equipment\">\r\n    <th mat-header-cell *matHeaderCellDef> #Equipment </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.equipment}} </td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"fromDate\">\r\n    <th mat-header-cell *matHeaderCellDef> From Date </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.fromDate | slice:0:10}} </td>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"toDate\">\r\n    <th mat-header-cell *matHeaderCellDef> To Date </th>\r\n    <td mat-cell *matCellDef=\"let element\"> {{element.toDate | slice:0:10}} </td>\r\n  </ng-container>\r\n\r\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n</table>"
+module.exports = "<nav class=\"navbar navbar-dark bg-dark mb-5\">\n  <a class=\"navbar-brand\" routerLink=\"/user-project\">Manage Project</a>\n  <div class=\"navbar-expand ml-auto navbar-nav\">\n    <div class=\"navbar-brand\">\n      <a (click)=\"openModal()\">Admin Login\n        <mat-icon class=\"icon\">person</mat-icon>\n      </a>\n    </div>\n  </div>\n</nav>\n<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n  <ng-container matColumnDef=\"projectName\">\n    <th mat-header-cell *matHeaderCellDef> Project Name </th>\n    <td mat-cell *matCellDef=\"let element\"><a (click)=\"forTheNextComponent(element._id, element.name)\">{{element.name}}\n      </a></td>\n  </ng-container>\n\n  <ng-container matColumnDef=\"employees\">\n    <th mat-header-cell *matHeaderCellDef> #Employees </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.employee}} </td>\n  </ng-container>\n\n  <ng-container matColumnDef=\"equipment\">\n    <th mat-header-cell *matHeaderCellDef> #Equipment </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.equipment}} </td>\n  </ng-container>\n\n  <ng-container matColumnDef=\"fromDate\">\n    <th mat-header-cell *matHeaderCellDef> From Date </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.fromDate | slice:0:10}} </td>\n  </ng-container>\n\n  <ng-container matColumnDef=\"toDate\">\n    <th mat-header-cell *matHeaderCellDef> To Date </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.toDate | slice:0:10}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>"
 
 /***/ }),
 
@@ -1378,7 +1380,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Eleimat\Desktop\dot-market-prject\manage-project\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/rbk17/Desktop/dot-market-prject/manage-project/src/main.ts */"./src/main.ts");
 
 
 /***/ })
